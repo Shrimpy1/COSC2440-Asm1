@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="initialize">
-      <change afterPath="$PROJECT_DIR$/src/Claim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClaimManagementSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClaimProcessManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dependant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InsuranceCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PolicyHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PolicyOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gson-2.10.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MenuManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClaimManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClaimSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +38,23 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2daanSx5AFPjU3OvtsHCUGWw9hH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -57,6 +63,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/Kiet/IdeaProjects/Assignment1/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +86,8 @@
       <workItem from="1711375871197" duration="625000" />
       <workItem from="1711376539847" duration="387000" />
       <workItem from="1711377016008" duration="4298000" />
+      <workItem from="1711387375518" duration="62000" />
+      <workItem from="1711463031673" duration="1503000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -86,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710254977192</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initialize">
+      <option name="closed" value="true" />
+      <created>1711387422574</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711387422574</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +123,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initialize" />
     <option name="LAST_COMMIT_MESSAGE" value="initialize" />
   </component>
