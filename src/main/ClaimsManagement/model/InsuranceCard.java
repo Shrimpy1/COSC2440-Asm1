@@ -1,8 +1,12 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
+package model;
+
+import model.customer.Customer;
 import java.time.LocalDate;
-import java.util.*;
+import prop.PolicyOwner;
+
 public class InsuranceCard {
     private String cardNumber;
     private Customer cardHolder;
@@ -18,5 +22,15 @@ public class InsuranceCard {
         this.cardHolder = cardHolder;
         this.policyOwner = policyOwner;
         this.expirationDate = expirationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "model.InsuranceCard{" +
+                "cardNumber='" + cardNumber + '\'' +
+                ", cardHolder=" + cardHolder +
+                ", policyOwner=" + policyOwner +
+                ", expirationDate=" + expirationDate +
+                '}';
     }
 }

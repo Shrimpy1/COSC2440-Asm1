@@ -1,6 +1,10 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
+package model.customer;
+
+import model.Claim;
+import model.InsuranceCard;
 import java.util.*;
 public abstract class Customer {
     private String id;
@@ -29,5 +33,15 @@ public abstract class Customer {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "model.customer.Customer{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", insuranceCard=" + insuranceCard +
+                ", claims=" + claims +
+                '}';
     }
 }

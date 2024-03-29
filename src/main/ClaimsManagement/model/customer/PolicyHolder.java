@@ -1,6 +1,10 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
+package model.customer;
+
+import model.Claim;
+import model.InsuranceCard;
 import java.util.*;
 public class PolicyHolder extends Customer{
     private List<Dependant> dependants;

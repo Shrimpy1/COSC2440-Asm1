@@ -5,14 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="initialize">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MenuManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/InsuranceCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/ClaimController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Dependant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/System.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/ConsoleInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/FileHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/LocalDateAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClaimManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClaimSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/Claim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClaimProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/ClaimProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClaimSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dependant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/prop/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsuranceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/InsuranceCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/MenuManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PolicyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/PolicyHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PolicyOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/prop/PolicyOwner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,17 +79,34 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/claim",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/Kiet/IdeaProjects/Assignment1/src/Main.java",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "two.files.diff.last.used.folder": "C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/claim",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Assignment1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +126,23 @@
       <workItem from="1711377016008" duration="4298000" />
       <workItem from="1711387375518" duration="62000" />
       <workItem from="1711463031673" duration="1503000" />
+      <workItem from="1711484697693" duration="612000" />
+      <workItem from="1711518281194" duration="596000" />
+      <workItem from="1711546600462" duration="1624000" />
+      <workItem from="1711644286553" duration="610000" />
+      <workItem from="1711726819502" duration="784000" />
+      <workItem from="1711728111135" duration="57000" />
+      <workItem from="1711728184803" duration="1043000" />
+      <workItem from="1711735539411" duration="626000" />
+      <workItem from="1711736795656" duration="2866000" />
+      <workItem from="1711739692348" duration="24000" />
+      <workItem from="1711739898052" duration="20000" />
+      <workItem from="1711739926247" duration="43000" />
+      <workItem from="1711739976077" duration="275000" />
+      <workItem from="1711740310892" duration="135000" />
+      <workItem from="1711740452853" duration="55000" />
+      <workItem from="1711740520758" duration="37000" />
+      <workItem from="1711740593046" duration="1207000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -105,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711387422574</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initialize">
+      <option name="closed" value="true" />
+      <created>1711484707662</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711484707662</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

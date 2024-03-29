@@ -1,8 +1,12 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
+package model;
+
 import java.util.*;
 import java.time.LocalDate;
+import model.customer.Customer;
+
 public class Claim {
     private enum ClaimStatus {
         NEW,
@@ -40,9 +44,45 @@ public class Claim {
         this.receiverBankingInfo = receiverBankingInfo;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public LocalDate getClaimDate() {
+        return claimDate;
+    }
+
+    public Customer getInsuredPerson() {
+        return insuredPerson;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public LocalDate getExamDate() {
+        return examDate;
+    }
+
+    public List<String> getDocuments() {
+        return documents;
+    }
+
+    public double getClaimAmount() {
+        return claimAmount;
+    }
+
+    public ClaimStatus getStatus() {
+        return status;
+    }
+
+    public String getReceiverBankingInfo() {
+        return receiverBankingInfo;
+    }
+
     @Override
     public String toString() {
-        return "Claim{" +
+        return "model.Claim{" +
                 "id='" + id + '\'' +
                 ", claimDate=" + claimDate +
                 ", insuredPerson=" + insuredPerson.getName() +
