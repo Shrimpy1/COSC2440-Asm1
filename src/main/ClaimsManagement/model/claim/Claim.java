@@ -1,7 +1,7 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package model;
+package model.claim;
 
 import java.util.*;
 import java.time.LocalDate;
@@ -80,9 +80,21 @@ public class Claim {
         return receiverBankingInfo;
     }
 
+    public void setStatusNew(){
+        this.status = ClaimStatus.NEW;
+    }
+
+    public void setStatusProcessing(){
+        this.status = ClaimStatus.PROCESSING;
+    }
+
+    public void setStatusDone(){
+        this.status = ClaimStatus.DONE;
+    }
+
     @Override
     public String toString() {
-        return "model.Claim{" +
+        return "model.claim.Claim{" +
                 "id='" + id + '\'' +
                 ", claimDate=" + claimDate +
                 ", insuredPerson=" + insuredPerson.getName() +

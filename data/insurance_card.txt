@@ -1,0 +1,7 @@
+[
+  {
+    "cardNumber": "0123",
+    "policyOwner": "kiet",
+    "expirationDate": "2020-01-01"
+  }
+]

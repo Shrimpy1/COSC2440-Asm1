@@ -1,9 +1,8 @@
 package view.claim;
 
-import model.Claim;
+import model.claim.Claim;
 
 import java.util.Map;
-import java.util.Objects;
 
 public abstract class ClaimView {
     public static final String CLAIM_ID = "CLAIM ID";
@@ -18,5 +17,5 @@ public abstract class ClaimView {
 
     public abstract void display(Claim claim);
 
-    public abstract Map<String, Objects> displayNewClaimForm();
+    public abstract Map<String, Object> displayNewClaimForm();
 }

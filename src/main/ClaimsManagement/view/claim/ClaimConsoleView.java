@@ -1,9 +1,9 @@
 package view.claim;
 
-import model.Claim;
-
+import model.claim.Claim;
+import util.ConsoleInput;
 import java.util.Map;
-import java.util.Objects;
+import java.util.Scanner;
 
 public class ClaimConsoleView extends ClaimView {
     @Override
@@ -19,8 +19,8 @@ public class ClaimConsoleView extends ClaimView {
     }
 
     @Override
-    public Map<String, Objects> displayNewClaimForm() {
-
+    public Map<String, Object> displayNewClaimForm() {
+        Scanner scanner = ConsoleInput.getInstance().getScanner();
         return null;
     }
 }

@@ -1,9 +1,9 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package controller;
+package controller.claim;
 
-import model.Claim;
+import model.claim.Claim;
 
 import java.util.*;
 public interface ClaimProcessManager {

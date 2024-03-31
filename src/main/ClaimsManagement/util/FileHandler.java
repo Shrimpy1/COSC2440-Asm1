@@ -37,7 +37,7 @@ public class FileHandler {
             }
         }
 
-        File file = new File(dataDir, (fileName + ".json"));
+        File file = new File(dataDir, (fileName + ".txt"));
 
         try (FileWriter writer = new FileWriter(file)){
             gson.toJson(data, writer);
