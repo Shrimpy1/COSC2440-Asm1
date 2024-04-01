@@ -24,7 +24,6 @@ public class CustomerConsoleView extends CustomerView{
         for (Claim claim : customer.getClaims()) {
             System.out.println("- " + claim.getId());
         }
-        System.out.println("\n");
     }
 
     @Override

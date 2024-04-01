@@ -3,9 +3,12 @@
  */
 import controller.insurance_card.InsuranceCardController;
 import model.customer.CustomerSet;
+import model.customer.Dependant;
 import model.insurance_card.InsuranceCard;
 import model.insurance_card.InsuranceCardSet;
 import view.customer.CustomerConsoleView;
+import view.customer.DependantConsoleView;
+import view.customer.PolicyholderConsoleView;
 import view.insurance_card.InsuranceCardConsoleView;
 
 public class Main {
@@ -31,9 +34,16 @@ public class Main {
         CustomerSet.getInstance();
         InsuranceCardSet.getInstance();
 
-        CustomerConsoleView cview = new CustomerConsoleView();
+        DependantConsoleView dview = new DependantConsoleView();
+        PolicyholderConsoleView pview = new PolicyholderConsoleView();
         System.out.println(CustomerSet.getInstance().getCustomers().size());
-        CustomerSet.getInstance().getCustomers().forEach(cview::display);
+        CustomerSet.getInstance().getCustomers().forEach(customer -> {
+            if (customer instanceof Dependant){
+                dview.display(customer);
+            } else {
+                pview.display(customer);
+            }
+        });
 
         InsuranceCardController icc = new InsuranceCardController(new InsuranceCard(), new InsuranceCardConsoleView());
 

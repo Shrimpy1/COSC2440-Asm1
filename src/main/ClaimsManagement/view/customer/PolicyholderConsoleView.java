@@ -21,6 +21,7 @@ public class PolicyholderConsoleView extends CustomerConsoleView{
 
         Set<Dependant> dependants = ((Policyholder) policyHolder).getDependants();
         dependants.forEach(dependant -> System.out.println("- " + dependant.getFullName()));
+        System.out.println();
     }
 
     @Override
