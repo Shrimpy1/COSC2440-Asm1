@@ -1,9 +1,8 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package model.Document;
+package model.document;
 
-import java.util.*;
 public class Document {
     private String fileName;
 
