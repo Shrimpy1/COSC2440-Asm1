@@ -1,7 +1,7 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package prop;
+package model.Document;
 
 import java.util.*;
 public class Document {
@@ -16,7 +16,7 @@ public class Document {
 
     @Override
     public String toString() {
-        return "prop.Document{" +
+        return "model.Document.Document{" +
                 "fileName='" + fileName + '\'' +
                 '}';
     }

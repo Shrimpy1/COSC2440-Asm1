@@ -44,7 +44,8 @@ public class ClaimSet {
     }
 
     public void saveData(){
-
+        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.claims)? "Saved claims data successfully!" : "Failed to save claims data!";
+        System.out.println(result);
     }
 
     private void loadData(){

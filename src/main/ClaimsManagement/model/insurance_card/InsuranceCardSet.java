@@ -46,7 +46,7 @@ public class InsuranceCardSet {
     }
 
     public void saveData(){
-        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.insuranceCards)? "Saved insurance card data successfully!" : "Failed to save insurance card data!";
+        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.insuranceCards)? "Saved insurance cards data successfully!" : "Failed to save insurance cards data!";
         System.out.println(result);
     }
 

@@ -50,7 +50,7 @@ public class CustomerSet{
                 data.add((Policyholder) customer);
             }
         });
-        String result = FileHandler.getInstance().writeObjectToFile("customer.txt", data)? "Saved customer data successfully!" : "Failed to save customer data!";
+        String result = FileHandler.getInstance().writeObjectToFile("customer.txt", data)? "Saved customers data successfully!" : "Failed to save customers data!";
         System.out.println(result);
     }
 
