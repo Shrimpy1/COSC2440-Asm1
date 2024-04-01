@@ -1,6 +1,12 @@
 package model.insurance_card;
 
+import com.google.gson.reflect.TypeToken;
+import model.claim.Claim;
+import util.FileHandler;
+
+import java.lang.reflect.Type;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class InsuranceCardSet {
@@ -14,6 +20,7 @@ public class InsuranceCardSet {
     public static InsuranceCardSet getInstance(){
         if (instance == null){
             instance = new InsuranceCardSet();
+            instance.loadData();
         }
         return instance;
     }
@@ -32,9 +39,21 @@ public class InsuranceCardSet {
 
     public InsuranceCard getInsuranceCardByNumber(String cardNumber){
         for (InsuranceCard card : this.insuranceCards){
-            if (card.getCardNumber() == cardNumber) return card;
+            if (Objects.equals(card.getCardNumber(), cardNumber)) return card;
         }
         System.out.println("Card with the number not found.");
         return null;
+    }
+
+    public void saveData(){
+        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.insuranceCards)? "Saved insurance card data successfully!" : "Failed to save insurance card data!";
+        System.out.println(result);
+    }
+
+    private void loadData(){
+        FileHandler fh = FileHandler.getInstance();
+        Type type = new TypeToken<Set<InsuranceCard>>(){}.getType();
+        this.insuranceCards = fh.loadObjectFromFile("insurance_card.txt", type);
+
     }
 }

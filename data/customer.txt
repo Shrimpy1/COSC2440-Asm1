@@ -1,8 +1,12 @@
 [
   {
-    "dependants": [],
+    "dependants": [
+      {
+        "id": "012",
+        "fullName": "tan"
+      }
+    ],
     "id": "123",
-    "name": "kiet",
-    "claims": []
+    "fullName": "kiet"
   }
 ]

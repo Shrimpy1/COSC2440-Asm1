@@ -1,5 +1,9 @@
 package model.claim;
 
+import com.google.gson.reflect.TypeToken;
+import util.FileHandler;
+
+import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -7,13 +11,14 @@ public class ClaimSet {
     private static ClaimSet instance;
     private Set<Claim> claims;
 
-    public ClaimSet() {
+    private ClaimSet() {
         this.claims = new HashSet<Claim>();
     }
 
     public static ClaimSet getInstance() {
         if (instance == null){
             instance = new ClaimSet();
+            instance.loadData();
         }
         return instance;
     }
@@ -32,9 +37,19 @@ public class ClaimSet {
 
     public Claim getClaimById(String id){
         for (Claim claim : claims){
-            if (claim.getId() == id) return claim;
+            if (claim.getId().equals(id)) return claim;
         }
         System.out.println("Claim with the id not found.");
         return null;
+    }
+
+    public void saveData(){
+
+    }
+
+    private void loadData(){
+        FileHandler fh = FileHandler.getInstance();
+        Type type = new TypeToken<Set<Claim>>(){}.getType();
+        this.claims = fh.loadObjectFromFile("claim.txt", type);
     }
 }

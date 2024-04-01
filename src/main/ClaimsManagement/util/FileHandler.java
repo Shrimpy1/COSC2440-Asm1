@@ -5,47 +5,58 @@ package util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import model.insurance_card.InsuranceCard;
+import util.adaper.InsuranceCardAdapter;
+import util.adaper.LocalDateAdapter;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 
 public class FileHandler {
-    private static FileHandler fileHandler;
+    private static FileHandler instance;
     private final Gson gson;
 
     public FileHandler() {
-        this.gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).setPrettyPrinting().create();
+        this.gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).registerTypeAdapter(InsuranceCard.class, new InsuranceCardAdapter()).setPrettyPrinting().create();
     }
 
     public static FileHandler getInstance(){
-        if (fileHandler == null){
-            fileHandler = new FileHandler();
+        if (instance == null){
+            instance = new FileHandler();
         }
-        return fileHandler;
+        return instance;
     }
 
-    public boolean writeData(String fileName, Object data) {
+    public boolean writeObjectToFile(String fileName, Object data) {
         File dataDir = new File("data");
         if (!dataDir.exists()) {
             if (dataDir.mkdir()) {
-                java.lang.System.out.println("Data directory created: " + dataDir.getAbsolutePath());
+                System.out.println("Data directory created: " + dataDir.getAbsolutePath());
             } else {
-                java.lang.System.err.println("Failed to create data directory!");
+                System.err.println("Failed to create data directory!");
                 return false;
             }
         }
 
-        File file = new File(dataDir, (fileName + ".txt"));
+        File file = new File(dataDir, (fileName));
 
         try (FileWriter writer = new FileWriter(file)){
             gson.toJson(data, writer);
-            java.lang.System.out.println("Printed");
+            System.out.println("Printed");
             return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace();;
             return false;
         }
     }
+
+    public <T> T loadObjectFromFile(String fileName, Type typeOfT){
+        try (BufferedReader reader = new BufferedReader(new FileReader("data/" + fileName))) {
+            return gson.fromJson(reader, typeOfT);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
 }

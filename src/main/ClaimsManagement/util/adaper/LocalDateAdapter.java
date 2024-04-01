@@ -1,7 +1,7 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package util;
+package util.adaper;
 
 import com.google.gson.*;
 import java.lang.reflect.Type;

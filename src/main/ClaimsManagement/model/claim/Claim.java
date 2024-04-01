@@ -97,7 +97,7 @@ public class Claim {
         return "model.claim.Claim{" +
                 "id='" + id + '\'' +
                 ", claimDate=" + claimDate +
-                ", insuredPerson=" + insuredPerson.getName() +
+                ", insuredPerson=" + insuredPerson.getFullName() +
                 ", cardNumber='" + cardNumber + '\'' +
                 ", examDate=" + examDate +
                 ", documents=" + documents +

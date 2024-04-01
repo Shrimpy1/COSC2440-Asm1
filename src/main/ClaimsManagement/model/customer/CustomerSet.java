@@ -1,8 +1,10 @@
 package model.customer;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import com.google.gson.reflect.TypeToken;
+import util.FileHandler;
+
+import java.lang.reflect.Type;
+import java.util.*;
 
 public class CustomerSet{
     private static CustomerSet instance;
@@ -15,6 +17,7 @@ public class CustomerSet{
     public static CustomerSet getInstance(){
         if (instance == null){
             instance = new CustomerSet();
+            instance.loadData();
         }
         return instance;
     }
@@ -39,5 +42,26 @@ public class CustomerSet{
         return customers;
     }
 
-    
+    public void saveData(){
+        Set<Policyholder> data = new HashSet<Policyholder>();
+
+        this.customers.forEach(customer -> {
+            if (customer instanceof Policyholder){
+                data.add((Policyholder) customer);
+            }
+        });
+        String result = FileHandler.getInstance().writeObjectToFile("customer.txt", data)? "Saved customer data successfully!" : "Failed to save customer data!";
+        System.out.println(result);
+    }
+
+    private void loadData(){
+        FileHandler fh = FileHandler.getInstance();
+        Type type = new TypeToken<List<Policyholder>>(){}.getType();
+        List<Policyholder> policyholderList = fh.loadObjectFromFile("customer.txt", type);
+
+        policyholderList.forEach(policyholder -> {
+            this.customers.add(policyholder);
+            this.customers.addAll(policyholder.getDependants());
+        });
+    }
 }

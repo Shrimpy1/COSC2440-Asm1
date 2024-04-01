@@ -1,16 +1,12 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-import controller.InsuranceCardController;
-import model.customer.Customer;
+import controller.insurance_card.InsuranceCardController;
 import model.customer.CustomerSet;
-import model.customer.Dependant;
-import model.customer.PolicyHolder;
 import model.insurance_card.InsuranceCard;
 import model.insurance_card.InsuranceCardSet;
-import util.FileHandler;
+import view.customer.CustomerConsoleView;
 import view.insurance_card.InsuranceCardConsoleView;
-import view.insurance_card.InsuranceCardView;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,18 +19,36 @@ public class Main {
 //        PolicyHolder p1 = new PolicyHolder("123", "Son");
 //
 //        System.out.println(d1.equals(p1));
-        Customer kiet = new PolicyHolder("123", "kiet");
-        CustomerSet.getInstance().add(kiet);
+//        PolicyHolder kiet = new PolicyHolder("123", "kiet");
+//        Dependant tan = new Dependant("012", "tan");
+//        kiet.addDependant(tan);
+//
+//        CustomerSet.getInstance().add(kiet);
+//        CustomerSet.getInstance().add(tan);
+//
+//        CustomerSet.getInstance().saveData();
+
+        CustomerSet.getInstance();
+        InsuranceCardSet.getInstance();
+
+        CustomerConsoleView cview = new CustomerConsoleView();
+        System.out.println(CustomerSet.getInstance().getCustomers().size());
+        CustomerSet.getInstance().getCustomers().forEach(cview::display);
 
         InsuranceCardController icc = new InsuranceCardController(new InsuranceCard(), new InsuranceCardConsoleView());
 
-        icc.createNewInsuranceCardLoop();
+//        icc.createNewInsuranceCard();
 
         for (InsuranceCard card : InsuranceCardSet.getInstance().getInsuranceCards()){
             icc.getView().display(card);
         }
 
-        FileHandler.getInstance().writeData("customer", CustomerSet.getInstance().getCustomers());
-        FileHandler.getInstance().writeData("insurance_card", InsuranceCardSet.getInstance().getInsuranceCards());
+        CustomerSet.getInstance().saveData();
+        InsuranceCardSet.getInstance().saveData();
+//
+//        FileHandler.getInstance().writeObjectToFile("customer", CustomerSet.getInstance().getCustomers());
+//        FileHandler.getInstance().writeObjectToFile("insurance_card.txt", InsuranceCardSet.getInstance().getInsuranceCards());
+
+//        CustomerSet.getInstance().getCustomers().forEach(customer -> );
     }
 }

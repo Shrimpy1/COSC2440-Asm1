@@ -16,11 +16,13 @@ public class ClaimConsoleView extends ClaimView {
         System.out.println("Documents: " + claim.getDocuments());
         System.out.println("Claim Amount: " + claim.getClaimAmount());
         System.out.println("Receiver Banking Info: " + claim.getReceiverBankingInfo());
+        System.out.println("\n");
     }
 
     @Override
     public Map<String, Object> displayNewClaimForm() {
         Scanner scanner = ConsoleInput.getInstance().getScanner();
+
         return null;
     }
 }

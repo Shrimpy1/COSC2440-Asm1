@@ -8,43 +8,43 @@ import model.insurance_card.InsuranceCard;
 import java.util.*;
 public abstract class Customer {
     private String id;
-    private String name;
-    private InsuranceCard insuranceCard;
-    private List<Claim> claims;
+    private String fullName;
+    private transient InsuranceCard insuranceCard;
+    private transient List<Claim> claims;
 
     public Customer() {
         this.id = "";
-        this.name = "";
+        this.fullName = "";
         this.claims = new ArrayList<Claim>();
     }
 
-    public Customer(String id, String name) {
+    public Customer(String id, String fullName) {
         this.id = id;
-        this.name = name;
+        this.fullName = fullName;
         this.claims = new ArrayList<Claim>();
     }
 
-    public Customer(String id, String name, List<Claim> claims) {
+    public Customer(String id, String fullName, List<Claim> claims) {
         this.id = id;
-        this.name = name;
+        this.fullName = fullName;
         this.claims = claims;
     }
 
-    public Customer(String id, String name, InsuranceCard insuranceCard, List<Claim> claims) {
+    public Customer(String id, String fullName, InsuranceCard insuranceCard, List<Claim> claims) {
         this.id = id;
-        this.name = name;
+        this.fullName = fullName;
         this.insuranceCard = insuranceCard;
         this.claims = claims;
     }
 
-    public boolean addInsuranceCard(InsuranceCard card){
+    public boolean setInsuranceCard(InsuranceCard card){
         this.insuranceCard = card;
         card.setCardHolder(this);
         return true;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
     public String getId() {
@@ -72,7 +72,7 @@ public abstract class Customer {
     public String toString() {
         return "model.customer.Customer{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + fullName + '\'' +
                 ", insuranceCard=" + insuranceCard +
                 ", claims=" + claims +
                 '}';
