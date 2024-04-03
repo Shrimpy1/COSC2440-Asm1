@@ -12,11 +12,19 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class InsuranceCardController {
-    private final InsuranceCard insuranceCard;
-    private final InsuranceCardView view;
+    private InsuranceCard insuranceCard;
+    private InsuranceCardView view;
 
     public InsuranceCardController(InsuranceCard insuranceCard, InsuranceCardView view) {
         this.insuranceCard = insuranceCard;
+        this.view = view;
+    }
+
+    public void setInsuranceCard(InsuranceCard insuranceCard) {
+        this.insuranceCard = insuranceCard;
+    }
+
+    public void setView(InsuranceCardView view) {
         this.view = view;
     }
 

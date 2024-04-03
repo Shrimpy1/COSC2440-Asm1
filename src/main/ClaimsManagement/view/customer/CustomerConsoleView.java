@@ -16,7 +16,6 @@ public class CustomerConsoleView extends CustomerView{
 
     @Override
     public void display(Customer customer) {
-        System.out.println("Customer information: ");
         System.out.println("Id: " + customer.getId());
         System.out.println("Full Name: " + customer.getFullName());
         System.out.println("Insurance Card Number: " + customer.getInsuranceCard().getCardNumber());
@@ -30,7 +29,6 @@ public class CustomerConsoleView extends CustomerView{
     public Map<String, String> displayNewCustomerForm() {
         Scanner scanner = ConsoleInput.getInstance().getScanner();
         Map<String, String> data = new HashMap<String, String>();
-        System.out.println("New Customer Form: ");
         System.out.print("Customer Id: ");
         data.put(CUSTOMER_ID, scanner.nextLine());
         System.out.print("Full Name: ");

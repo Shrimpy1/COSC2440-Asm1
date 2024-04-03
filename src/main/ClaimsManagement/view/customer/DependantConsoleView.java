@@ -13,11 +13,12 @@ public class DependantConsoleView extends CustomerConsoleView{
     public void display(Customer dependant) {
         System.out.println("Dependant information: ");
         super.display(dependant);
+        System.out.println();
     }
 
     @Override
     public Map<String, String> displayNewCustomerForm() {
-        System.out.println("New Dependant Form:");
+        System.out.println("\tNew Dependant Form:");
         return super.displayNewCustomerForm();
     }
 }

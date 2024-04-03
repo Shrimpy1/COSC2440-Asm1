@@ -2,6 +2,8 @@ package view.claim;
 
 import model.claim.Claim;
 import util.ConsoleInput;
+
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -20,9 +22,24 @@ public class ClaimConsoleView extends ClaimView {
     }
 
     @Override
-    public Map<String, Object> displayNewClaimForm() {
+    public Map<String, String> displayNewClaimForm() {
         Scanner scanner = ConsoleInput.getInstance().getScanner();
-
-        return null;
+        Map<String, String> data = new HashMap<String, String>();
+        System.out.println("\tNew Claim Form: ");
+        System.out.print("Claim ID (format f-10 number): ");
+        data.put(CLAIM_ID, scanner.nextLine());
+        System.out.print("Claim Date: ");
+        data.put(CLAIM_DATE, scanner.nextLine());
+        System.out.print("Insured Person ID: ");
+        data.put(INSURED_PERSON, scanner.nextLine());
+        System.out.print("Card Number: ");
+        data.put(CARD_NUMBER, scanner.nextLine());
+        System.out.print("Exam Date: ");
+        data.put(EXAM_DATE, scanner.nextLine());
+        System.out.print("Document Name: ");
+        data.put(DOCUMENTS, scanner.nextLine());
+        System.out.print("Claim Amount: ");
+        data.put(CLAIM_AMOUNT, scanner.nextLine());
+        return data;
     }
 }

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="update" />
+    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/DocumentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/receiver_banking_info/ReceiverBankingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/receiver_banking_info/ReceiverBankingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/DependantConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/DependantConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/PolicyholderConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/PolicyholderConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +161,10 @@
       <workItem from="1711826322795" duration="5201000" />
       <workItem from="1711894981015" duration="4206000" />
       <workItem from="1711906456405" duration="635000" />
-      <workItem from="1711978018138" duration="24995000" />
+      <workItem from="1711978018138" duration="26678000" />
+      <workItem from="1712074391571" duration="624000" />
+      <workItem from="1712123243522" duration="2629000" />
+      <workItem from="1712126812508" duration="987000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -212,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712006088390</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <option name="closed" value="true" />
+      <created>1712006478460</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712006478460</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

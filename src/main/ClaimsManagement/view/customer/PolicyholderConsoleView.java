@@ -26,7 +26,7 @@ public class PolicyholderConsoleView extends CustomerConsoleView{
 
     @Override
     public Map<String, String> displayNewCustomerForm() {
-        System.out.println("New Policyholder Form:");
+        System.out.println("\tNew Policyholder Form:");
         return super.displayNewCustomerForm();
     }
 

@@ -16,6 +16,14 @@ public abstract class PolicyholderController {
         this.view = view;
     }
 
+    public void setPolicyHolder(Policyholder policyHolder) {
+        this.policyHolder = policyHolder;
+    }
+
+    public void setView(PolicyholderConsoleView view) {
+        this.view = view;
+    }
+
     public void createNewPolicyHolder(){
         Map<String, String> data = view.displayNewCustomerForm();
         String id = data.get(CustomerView.CUSTOMER_ID);

@@ -14,12 +14,12 @@ public class InsuranceCardConsoleView extends InsuranceCardView{
 
     @Override
     public void display(InsuranceCard card) {
-        System.out.println("\nInsurance Card Information:");
+        System.out.println("Insurance Card Information:");
         System.out.println("Card Number: " + card.getCardNumber());
         System.out.println("Card Holder: " + card.getCardHolder().getFullName());
         System.out.println("Policy Owner: " + card.getPolicyOwner().getName());
         System.out.println("Expiration Date: " + card.getExpirationDate());
-        System.out.println("\n");
+        System.out.println();
     }
 
     @Override

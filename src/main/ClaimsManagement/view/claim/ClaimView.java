@@ -17,5 +17,5 @@ public abstract class ClaimView {
 
     public abstract void display(Claim claim);
 
-    public abstract Map<String, Object> displayNewClaimForm();
+    public abstract Map<String, String> displayNewClaimForm();
 }

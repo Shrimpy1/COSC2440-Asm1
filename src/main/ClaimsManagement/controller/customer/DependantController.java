@@ -15,6 +15,14 @@ public class DependantController {
         this.view = view;
     }
 
+    public void setDependant(Dependant dependant) {
+        this.dependant = dependant;
+    }
+
+    public void setView(DependantConsoleView view) {
+        this.view = view;
+    }
+
     public void createNewDependant(){
         Map<String, String> data = view.displayNewCustomerForm();
         String id = data.get(CustomerView.CUSTOMER_ID);

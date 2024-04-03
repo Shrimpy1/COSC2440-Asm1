@@ -6,6 +6,8 @@ package model.claim;
 import java.util.*;
 import java.time.LocalDate;
 import model.customer.Customer;
+import model.document.Document;
+import model.receiver_banking_info.ReceiverBankingInfo;
 
 public class Claim {
     private enum ClaimStatus {
@@ -18,21 +20,20 @@ public class Claim {
     private Customer insuredPerson;
     private String cardNumber;
     private LocalDate examDate;
-    private List<String> documents;
+    private List<Document> documents;
     private double claimAmount;
     private ClaimStatus status;
-    private String receiverBankingInfo;
+    private ReceiverBankingInfo receiverBankingInfo;
 
     public Claim() {
         this.id = "";
         this.cardNumber = "";
-        this.documents = new ArrayList<String>();
+        this.documents = new ArrayList<Document>();
         this.claimAmount = 0;
         this.status = ClaimStatus.NEW;
-        this.receiverBankingInfo = "";
     }
 
-    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<String> documents, double claimAmount, String receiverBankingInfo) {
+    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<Document> documents, double claimAmount, ReceiverBankingInfo receiverBankingInfo) {
         this.id = id;
         this.claimDate = claimDate;
         this.insuredPerson = insuredPerson;
@@ -64,7 +65,7 @@ public class Claim {
         return examDate;
     }
 
-    public List<String> getDocuments() {
+    public List<Document> getDocuments() {
         return documents;
     }
 
@@ -76,7 +77,7 @@ public class Claim {
         return status;
     }
 
-    public String getReceiverBankingInfo() {
+    public ReceiverBankingInfo getReceiverBankingInfo() {
         return receiverBankingInfo;
     }
 
