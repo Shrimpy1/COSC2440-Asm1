@@ -45,7 +45,9 @@ public class InsuranceCardController {
 
         view.display(insuranceCard);
 
-        InsuranceCardSet.getInstance().addInsuranceCard(insuranceCard);
+        setInsuranceCard(insuranceCard);
+
+        InsuranceCardSet.getInstance().addInsuranceCard(this.insuranceCard);
     }
 
     public InsuranceCard getInsuranceCard() {

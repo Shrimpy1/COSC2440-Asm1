@@ -29,6 +29,10 @@ public abstract class PolicyholderController {
         String id = data.get(CustomerView.CUSTOMER_ID);
         String fullName = data.get(CustomerView.FULL_NAME);
 
-        CustomerSet.getInstance().add(new Policyholder(id, fullName));
+        Policyholder policyholder = new Policyholder(id, fullName);
+
+        setPolicyHolder(policyHolder);
+
+        CustomerSet.getInstance().add(this.policyHolder);
     }
 }

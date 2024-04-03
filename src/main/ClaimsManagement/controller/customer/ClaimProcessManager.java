@@ -1,7 +1,7 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
-package controller.claim;
+package controller.customer;
 
 import model.claim.Claim;
 

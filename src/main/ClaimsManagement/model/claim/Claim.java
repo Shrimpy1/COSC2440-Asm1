@@ -7,7 +7,7 @@ import java.util.*;
 import java.time.LocalDate;
 import model.customer.Customer;
 import model.document.Document;
-import model.receiver_banking_info.ReceiverBankingInfo;
+import model.banking_info.BankingInfo;
 
 public class Claim {
     private enum ClaimStatus {
@@ -23,7 +23,7 @@ public class Claim {
     private List<Document> documents;
     private double claimAmount;
     private ClaimStatus status;
-    private ReceiverBankingInfo receiverBankingInfo;
+    private BankingInfo bankingInfo;
 
     public Claim() {
         this.id = "";
@@ -33,7 +33,17 @@ public class Claim {
         this.status = ClaimStatus.NEW;
     }
 
-    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<Document> documents, double claimAmount, ReceiverBankingInfo receiverBankingInfo) {
+    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, double claimAmount) {
+        this.id = id;
+        this.claimDate = claimDate;
+        this.insuredPerson = insuredPerson;
+        this.cardNumber = cardNumber;
+        this.examDate = examDate;
+        this.claimAmount = claimAmount;
+        this.status = ClaimStatus.NEW;
+    }
+
+    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<Document> documents, double claimAmount, BankingInfo bankingInfo) {
         this.id = id;
         this.claimDate = claimDate;
         this.insuredPerson = insuredPerson;
@@ -42,7 +52,7 @@ public class Claim {
         this.documents = documents;
         this.claimAmount = claimAmount;
         this.status = ClaimStatus.NEW;
-        this.receiverBankingInfo = receiverBankingInfo;
+        this.bankingInfo = bankingInfo;
     }
 
     public String getId() {
@@ -77,8 +87,8 @@ public class Claim {
         return status;
     }
 
-    public ReceiverBankingInfo getReceiverBankingInfo() {
-        return receiverBankingInfo;
+    public BankingInfo getReceiverBankingInfo() {
+        return bankingInfo;
     }
 
     public void setStatusNew(){
@@ -93,6 +103,10 @@ public class Claim {
         this.status = ClaimStatus.DONE;
     }
 
+    public void addDocument(Document document){
+        this.documents.add(document);
+    }
+
     @Override
     public String toString() {
         return "model.claim.Claim{" +
@@ -104,7 +118,7 @@ public class Claim {
                 ", documents=" + documents +
                 ", claimAmount=" + claimAmount +
                 ", status=" + status +
-                ", receiverBankingInfo='" + receiverBankingInfo + '\'' +
+                ", receiverBankingInfo='" + bankingInfo + '\'' +
                 '}';
     }
 }

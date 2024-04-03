@@ -13,9 +13,13 @@ public class Document {
         this.fileName = fileName;
     }
 
+    public String getFileName() {
+        return fileName;
+    }
+
     @Override
     public String toString() {
-        return "model.Document.Document{" +
+        return "Document{" +
                 "fileName='" + fileName + '\'' +
                 '}';
     }

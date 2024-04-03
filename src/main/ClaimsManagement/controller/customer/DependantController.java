@@ -28,6 +28,10 @@ public class DependantController {
         String id = data.get(CustomerView.CUSTOMER_ID);
         String fullName = data.get(CustomerView.FULL_NAME);
 
-        CustomerSet.getInstance().add(new Dependant(id, fullName));
+        Dependant dependant = new Dependant(id, fullName);
+
+        setDependant(dependant);
+
+        CustomerSet.getInstance().add(this.dependant);
     }
 }
