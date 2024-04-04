@@ -46,4 +46,12 @@ public class Policyholder extends Customer{
     public boolean addDependant(Dependant dependant){
         return this.dependants.add(dependant);
     }
+
+    @Override
+    public String toString() {
+        return "Policyholder{" +
+                super.toString() +
+                "dependants=" + dependants +
+                '}';
+    }
 }

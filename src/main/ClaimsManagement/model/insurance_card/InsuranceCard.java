@@ -47,7 +47,7 @@ public class InsuranceCard {
 
     @Override
     public String toString() {
-        return "model.insurance_card.txt.InsuranceCard{" +
+        return "InsuranceCard{" +
                 "cardNumber='" + cardNumber + '\'' +
                 ", cardHolder=" + cardHolder.getFullName() +
                 ", policyOwner=" + policyOwner.getName() +

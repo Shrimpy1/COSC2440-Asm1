@@ -1,0 +1,33 @@
+[
+  {
+    "id": "f0000000001",
+    "claimDate": "2000-01-01",
+    "insuredPerson": {
+      "dependants": [
+        {
+          "id": "012",
+          "fullName": "tan"
+        }
+      ],
+      "id": "123",
+      "fullName": "kiet"
+    },
+    "cardNumber": "0123",
+    "examDate": "1999-01-01",
+    "documents": [
+      {
+        "fileName": "abc"
+      },
+      {
+        "fileName": "abcde"
+      }
+    ],
+    "claimAmount": 123.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "ehe",
+      "name": "kiet",
+      "number": "123456"
+    }
+  }
+]

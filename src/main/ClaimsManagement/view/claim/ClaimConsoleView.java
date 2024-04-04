@@ -28,16 +28,14 @@ public class ClaimConsoleView extends ClaimView {
         System.out.println("\tNew Claim Form: ");
         System.out.print("Claim ID (format f-10 number): ");
         data.put(CLAIM_ID, scanner.nextLine());
-        System.out.print("Claim Date: ");
+        System.out.print("Claim Date (yyyy-MM-dd): ");
         data.put(CLAIM_DATE, scanner.nextLine());
         System.out.print("Insured Person ID: ");
         data.put(INSURED_PERSON, scanner.nextLine());
         System.out.print("Card Number: ");
         data.put(CARD_NUMBER, scanner.nextLine());
-        System.out.print("Exam Date: ");
+        System.out.print("Exam Date (yyyy-MM-dd): ");
         data.put(EXAM_DATE, scanner.nextLine());
-        System.out.print("Document Name: ");
-        data.put(DOCUMENTS, scanner.nextLine());
         System.out.print("Claim Amount: ");
         data.put(CLAIM_AMOUNT, scanner.nextLine());
         return data;

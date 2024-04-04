@@ -70,7 +70,7 @@ public abstract class Customer {
 
     @Override
     public String toString() {
-        return "model.customer.Customer{" +
+        return "Customer{" +
                 "id='" + id + '\'' +
                 ", name='" + fullName + '\'' +
                 ", insuranceCard=" + insuranceCard +

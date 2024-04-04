@@ -39,6 +39,7 @@ public class Claim {
         this.insuredPerson = insuredPerson;
         this.cardNumber = cardNumber;
         this.examDate = examDate;
+        this.documents = new ArrayList<Document>();
         this.claimAmount = claimAmount;
         this.status = ClaimStatus.NEW;
     }
@@ -107,9 +108,13 @@ public class Claim {
         this.documents.add(document);
     }
 
+    public void setBankingInfo(BankingInfo bankingInfo) {
+        this.bankingInfo = bankingInfo;
+    }
+
     @Override
     public String toString() {
-        return "model.claim.Claim{" +
+        return "Claim{" +
                 "id='" + id + '\'' +
                 ", claimDate=" + claimDate +
                 ", insuredPerson=" + insuredPerson.getFullName() +

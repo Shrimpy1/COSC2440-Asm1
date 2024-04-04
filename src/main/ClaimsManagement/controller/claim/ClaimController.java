@@ -1,5 +1,6 @@
 package controller.claim;
 
+import controller.banking_info.BankingInfoController;
 import controller.document.DocumentController;
 import model.claim.ClaimSet;
 import model.customer.Customer;
@@ -7,6 +8,8 @@ import model.customer.CustomerSet;
 import model.document.Document;
 import model.banking_info.BankingInfo;
 import util.ConsoleInput;
+import view.banking_info.BankingInfoConsoleView;
+import view.banking_info.BankingInfoView;
 import view.claim.ClaimView;
 import model.claim.Claim;
 import view.document.DocumentConsoleView;
@@ -23,6 +26,14 @@ public class ClaimController {
     public ClaimController(Claim claim, ClaimView view) {
         this.claim = claim;
         this.view = view;
+    }
+
+    public Claim getClaim() {
+        return claim;
+    }
+
+    public ClaimView getView() {
+        return view;
     }
 
     public void setClaim(Claim claim) {
@@ -44,14 +55,16 @@ public class ClaimController {
         String examDateStr = data.get(ClaimView.EXAM_DATE);
         LocalDate examDate = LocalDate.parse(examDateStr);
         double claimAmount = Double.parseDouble(data.get(ClaimView.CLAIM_AMOUNT));
-        BankingInfo rbi = BankingInfo.promptBankingInfo();
 
         Claim claim = new Claim(id, claimDate, insuredPerson, cardNumber, examDate, claimAmount);
+
         setClaim(claim);
 
         addNewDocumentLoop();
+        addNewBankingInfo();
 
         ClaimSet.getInstance().addClaim(this.claim);
+
     }
 
     public void addDocument(Document document){
@@ -59,6 +72,7 @@ public class ClaimController {
     }
 
     public void addNewDocumentLoop(){
+        System.out.println("\tDocuments:");
         Scanner scanner = ConsoleInput.getInstance().getScanner();
         String answer = "y";
         DocumentController dc = new DocumentController(new Document(), new DocumentConsoleView());
@@ -70,5 +84,15 @@ public class ClaimController {
             answer = scanner.nextLine();
             System.out.println();
         }
+    }
+
+    public void setBankingInfo(BankingInfo bankingInfo){
+        this.claim.setBankingInfo(bankingInfo);
+    }
+
+    public void addNewBankingInfo(){
+        BankingInfoController bic = new BankingInfoController(new BankingInfo(), new BankingInfoConsoleView());
+        bic.promptBankingInfo();
+        setBankingInfo(bic.getBankingInfo());
     }
 }

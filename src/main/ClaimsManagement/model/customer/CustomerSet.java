@@ -50,14 +50,14 @@ public class CustomerSet{
                 data.add((Policyholder) customer);
             }
         });
-        String result = FileHandler.getInstance().writeObjectToFile("customer.txt", data)? "Saved customers data successfully!" : "Failed to save customers data!";
+        String result = FileHandler.getInstance().writeObjectToFile("customer.json", data)? "Saved customers data successfully!" : "Failed to save customers data!";
         System.out.println(result);
     }
 
     private void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<List<Policyholder>>(){}.getType();
-        List<Policyholder> policyholderList = fh.loadObjectFromFile("customer.txt", type);
+        List<Policyholder> policyholderList = fh.loadObjectFromFile("customer.json", type);
 
         policyholderList.forEach(policyholder -> {
             this.customers.add(policyholder);

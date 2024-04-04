@@ -44,13 +44,13 @@ public class ClaimSet {
     }
 
     public void saveData(){
-        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.claims)? "Saved claims data successfully!" : "Failed to save claims data!";
+        String result = FileHandler.getInstance().writeObjectToFile("claim.json", this.claims)? "Saved claims data successfully!" : "Failed to save claims data!";
         System.out.println(result);
     }
 
     private void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<Set<Claim>>(){}.getType();
-        this.claims = fh.loadObjectFromFile("claim.txt", type);
+        this.claims = fh.loadObjectFromFile("claim.json", type);
     }
 }

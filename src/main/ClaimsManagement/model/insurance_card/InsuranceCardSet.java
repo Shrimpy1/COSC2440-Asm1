@@ -46,14 +46,14 @@ public class InsuranceCardSet {
     }
 
     public void saveData(){
-        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.txt", this.insuranceCards)? "Saved insurance cards data successfully!" : "Failed to save insurance cards data!";
+        String result = FileHandler.getInstance().writeObjectToFile("insurance_card.json", this.insuranceCards)? "Saved insurance cards data successfully!" : "Failed to save insurance cards data!";
         System.out.println(result);
     }
 
     private void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<Set<InsuranceCard>>(){}.getType();
-        this.insuranceCards = fh.loadObjectFromFile("insurance_card.txt", type);
+        this.insuranceCards = fh.loadObjectFromFile("insurance_card.json", type);
 
     }
 }

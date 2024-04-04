@@ -4,25 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="update controller for Claim class&#10;update Document class and ReceiverBankingInfo class&#10;create DocumentList">
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/banking_info/BankingInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/document/DocumentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/policy_owner/PolicyOwnerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoConsoleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/document/DocumentConsoleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/document/DocumentView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/policy_owner/PolicyOwnerConsoleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/policy_owner/PolicyOwnerView.java" afterDir="false" />
+    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="update Document view and controller">
+      <change afterPath="$PROJECT_DIR$/data/claim.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/customer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/insurance_card.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/insurance_card.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/banking_info/BankingInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/banking_info/BankingInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/banking_info/BankingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/banking_info/BankingInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/DocumentList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/receiver_banking_info/ReceiverBankingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/banking_info/BankingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Policyholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Policyholder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/banking_info/BankingInfoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,33 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/controller",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/Kiet/IdeaProjects/Assignment1/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "two.files.diff.last.used.folder": "C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/claim",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/controller&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Kiet/IdeaProjects/Assignment1/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/claim&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kiet\IdeaProjects\Assignment1\src\main\ClaimsManagement\controller" />
@@ -175,7 +175,10 @@
       <workItem from="1712123243522" duration="2629000" />
       <workItem from="1712126812508" duration="987000" />
       <workItem from="1712127813258" duration="83000" />
-      <workItem from="1712151718740" duration="7038000" />
+      <workItem from="1712151718740" duration="8694000" />
+      <workItem from="1712239349356" duration="10000" />
+      <workItem from="1712239725597" duration="629000" />
+      <workItem from="1712240380745" duration="2892000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712127886978</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update Document view and controller">
+      <option name="closed" value="true" />
+      <created>1712163449336</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712163449336</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +291,7 @@
     <MESSAGE value="restructure to mvc. created classes for file handling" />
     <MESSAGE value="update" />
     <MESSAGE value="update controller for Claim class&#10;update Document class and ReceiverBankingInfo class&#10;create DocumentList" />
-    <option name="LAST_COMMIT_MESSAGE" value="update controller for Claim class&#10;update Document class and ReceiverBankingInfo class&#10;create DocumentList" />
+    <MESSAGE value="update Document view and controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Document view and controller" />
   </component>
 </project>

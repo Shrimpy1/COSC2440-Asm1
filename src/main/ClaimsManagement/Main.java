@@ -1,11 +1,15 @@
 /**
  * @author Nguyen Ich Kiet - s3978724
  */
+import controller.claim.ClaimController;
 import controller.insurance_card.InsuranceCardController;
+import model.claim.Claim;
+import model.claim.ClaimSet;
 import model.customer.CustomerSet;
 import model.customer.Dependant;
 import model.insurance_card.InsuranceCard;
 import model.insurance_card.InsuranceCardSet;
+import view.claim.ClaimConsoleView;
 import view.customer.CustomerConsoleView;
 import view.customer.DependantConsoleView;
 import view.customer.PolicyholderConsoleView;
@@ -33,6 +37,7 @@ public class Main {
 
         CustomerSet.getInstance();
         InsuranceCardSet.getInstance();
+        ClaimSet.getInstance();
 
         DependantConsoleView dview = new DependantConsoleView();
         PolicyholderConsoleView pview = new PolicyholderConsoleView();
@@ -53,8 +58,16 @@ public class Main {
             icc.getView().display(card);
         }
 
+        ClaimController cc = new ClaimController(new Claim(), new ClaimConsoleView());
+//        cc.createNewClaim();
+
+        for (Claim claim : ClaimSet.getInstance().getClaims()){
+            cc.getView().display(claim);
+        }
+
         CustomerSet.getInstance().saveData();
         InsuranceCardSet.getInstance().saveData();
+        ClaimSet.getInstance().saveData();
 //
 //        FileHandler.getInstance().writeObjectToFile("customer", CustomerSet.getInstance().getCustomers());
 //        FileHandler.getInstance().writeObjectToFile("insurance_card.txt", InsuranceCardSet.getInstance().getInsuranceCards());

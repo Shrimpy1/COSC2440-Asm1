@@ -9,23 +9,25 @@ public class BankingInfo {
     private String name;
     private String number;
 
+    public BankingInfo() {
+    }
+
     public BankingInfo(String bank, String name, String number) {
         this.bank = bank;
         this.name = name;
         this.number = number;
     }
 
-    public static BankingInfo promptBankingInfo(){
-        Scanner scanner = ConsoleInput.getInstance().getScanner();
-        System.out.println("\tReceiver Banking Information: ");
-        System.out.print("Bank name: ");
-        String bank = scanner.nextLine();
-        System.out.print("Full Name: ");
-        String name = scanner.nextLine();
-        System.out.print("Number: ");
-        String number = scanner.nextLine();
+    public String getBank() {
+        return bank;
+    }
 
-        return new BankingInfo(bank, name, number);
+    public String getName() {
+        return name;
+    }
+
+    public String getNumber() {
+        return number;
     }
 
     @Override
