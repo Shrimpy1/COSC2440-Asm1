@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package controller.claim;
 
 import controller.banking_info.BankingInfoController;
@@ -9,7 +12,6 @@ import model.document.Document;
 import model.banking_info.BankingInfo;
 import util.ConsoleInput;
 import view.banking_info.BankingInfoConsoleView;
-import view.banking_info.BankingInfoView;
 import view.claim.ClaimView;
 import model.claim.Claim;
 import view.document.DocumentConsoleView;
@@ -18,6 +20,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class ClaimController {
     private Claim claim;
@@ -56,15 +59,18 @@ public class ClaimController {
         LocalDate examDate = LocalDate.parse(examDateStr);
         double claimAmount = Double.parseDouble(data.get(ClaimView.CLAIM_AMOUNT));
 
-        Claim claim = new Claim(id, claimDate, insuredPerson, cardNumber, examDate, claimAmount);
+        Claim claim = new Claim(id, claimDate, cardNumber, examDate, claimAmount);
+
+        insuredPerson.addClaim(claim);
 
         setClaim(claim);
 
         addNewDocumentLoop();
         addNewBankingInfo();
 
-        ClaimSet.getInstance().addClaim(this.claim);
+        display();
 
+        ClaimSet.getInstance().addClaim(this.claim);
     }
 
     public void addDocument(Document document){
@@ -87,12 +93,16 @@ public class ClaimController {
     }
 
     public void setBankingInfo(BankingInfo bankingInfo){
-        this.claim.setBankingInfo(bankingInfo);
+        this.claim.setReceiverBankingInfo(bankingInfo);
     }
 
     public void addNewBankingInfo(){
         BankingInfoController bic = new BankingInfoController(new BankingInfo(), new BankingInfoConsoleView());
         bic.promptBankingInfo();
         setBankingInfo(bic.getBankingInfo());
+    }
+
+    public void display(){
+        view.display(claim);
     }
 }

@@ -1,22 +1,32 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package view.claim;
 
+import model.banking_info.BankingInfo;
 import model.claim.Claim;
+import model.document.Document;
 import util.ConsoleInput;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class ClaimConsoleView extends ClaimView {
     @Override
     public void display(Claim claim) {
         System.out.println("Claim ID: " + claim.getId());
         System.out.println("Claim Date: " + claim.getClaimDate());
-        System.out.println("Insured Person: " + claim.getInsuredPerson());
+        System.out.println("Insured Person: " + claim.getInsuredPerson().getFullName());
         System.out.println("Card Number: " + claim.getCardNumber());
         System.out.println("Exam Date: " + claim.getExamDate());
-        System.out.println("Documents: " + claim.getDocuments());
-        System.out.println("Claim Amount: " + claim.getClaimAmount());
+        List<Document> documentList = claim.getDocuments();
+        String documents = documentList.stream().map(Document::getFileName).collect(Collectors.joining(", ")); // Get all Documents name in a string split by ','
+        String claimAmount = String.valueOf(claim.getClaimAmount());
+        System.out.println("Documents: " + documents);
+        System.out.println("Claim Amount: " + claimAmount);
         System.out.println("Receiver Banking Info: " + claim.getReceiverBankingInfo());
         System.out.println("\n");
     }

@@ -59,6 +59,11 @@ public abstract class Customer {
         return claims;
     }
 
+    public void addClaim(Claim claim){
+        this.claims.add(claim);
+        claim.setInsuredPerson(this);
+    }
+
     @Override
     public boolean equals(Object o){
         if (this == o) return true;

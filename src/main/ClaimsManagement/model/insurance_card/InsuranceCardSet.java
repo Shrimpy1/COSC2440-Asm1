@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package model.insurance_card;
 
 import com.google.gson.reflect.TypeToken;

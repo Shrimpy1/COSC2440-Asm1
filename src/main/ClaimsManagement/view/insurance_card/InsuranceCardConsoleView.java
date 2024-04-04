@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package view.insurance_card;
 
 import model.insurance_card.InsuranceCard;

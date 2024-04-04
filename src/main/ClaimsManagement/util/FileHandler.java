@@ -5,7 +5,9 @@ package util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import model.claim.Claim;
 import model.insurance_card.InsuranceCard;
+import util.adaper.ClaimAdapter;
 import util.adaper.InsuranceCardAdapter;
 import util.adaper.LocalDateAdapter;
 
@@ -18,7 +20,7 @@ public class FileHandler {
     private final Gson gson;
 
     public FileHandler() {
-        this.gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).registerTypeAdapter(InsuranceCard.class, new InsuranceCardAdapter()).setPrettyPrinting().create();
+        this.gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).registerTypeAdapter(InsuranceCard.class, new InsuranceCardAdapter()).registerTypeAdapter(Claim.class, new ClaimAdapter()).setPrettyPrinting().create();
     }
 
     public static FileHandler getInstance(){

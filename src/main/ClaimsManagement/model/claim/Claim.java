@@ -10,7 +10,7 @@ import model.document.Document;
 import model.banking_info.BankingInfo;
 
 public class Claim {
-    private enum ClaimStatus {
+    public enum ClaimStatus {
         NEW,
         PROCESSING,
         DONE
@@ -23,7 +23,7 @@ public class Claim {
     private List<Document> documents;
     private double claimAmount;
     private ClaimStatus status;
-    private BankingInfo bankingInfo;
+    private BankingInfo receiverBankingInfo;
 
     public Claim() {
         this.id = "";
@@ -31,6 +31,14 @@ public class Claim {
         this.documents = new ArrayList<Document>();
         this.claimAmount = 0;
         this.status = ClaimStatus.NEW;
+    }
+
+    public Claim(String id, LocalDate claimDate, String cardNumber, LocalDate examDate, double claimAmount) {
+        this.id = id;
+        this.claimDate = claimDate;
+        this.cardNumber = cardNumber;
+        this.examDate = examDate;
+        this.claimAmount = claimAmount;
     }
 
     public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, double claimAmount) {
@@ -44,7 +52,7 @@ public class Claim {
         this.status = ClaimStatus.NEW;
     }
 
-    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<Document> documents, double claimAmount, BankingInfo bankingInfo) {
+    public Claim(String id, LocalDate claimDate, Customer insuredPerson, String cardNumber, LocalDate examDate, List<Document> documents, double claimAmount, BankingInfo receiverBankingInfo) {
         this.id = id;
         this.claimDate = claimDate;
         this.insuredPerson = insuredPerson;
@@ -53,7 +61,7 @@ public class Claim {
         this.documents = documents;
         this.claimAmount = claimAmount;
         this.status = ClaimStatus.NEW;
-        this.bankingInfo = bankingInfo;
+        this.receiverBankingInfo = receiverBankingInfo;
     }
 
     public String getId() {
@@ -89,7 +97,7 @@ public class Claim {
     }
 
     public BankingInfo getReceiverBankingInfo() {
-        return bankingInfo;
+        return receiverBankingInfo;
     }
 
     public void setStatusNew(){
@@ -108,8 +116,12 @@ public class Claim {
         this.documents.add(document);
     }
 
-    public void setBankingInfo(BankingInfo bankingInfo) {
-        this.bankingInfo = bankingInfo;
+    public void setReceiverBankingInfo(BankingInfo receiverBankingInfo) {
+        this.receiverBankingInfo = receiverBankingInfo;
+    }
+
+    public void setInsuredPerson(Customer insuredPerson) {
+        this.insuredPerson = insuredPerson;
     }
 
     @Override
@@ -123,7 +135,7 @@ public class Claim {
                 ", documents=" + documents +
                 ", claimAmount=" + claimAmount +
                 ", status=" + status +
-                ", receiverBankingInfo='" + bankingInfo + '\'' +
+                ", receiverBankingInfo='" + receiverBankingInfo + '\'' +
                 '}';
     }
 }

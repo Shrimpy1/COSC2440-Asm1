@@ -39,28 +39,29 @@ public class Main {
         InsuranceCardSet.getInstance();
         ClaimSet.getInstance();
 
-        DependantConsoleView dview = new DependantConsoleView();
-        PolicyholderConsoleView pview = new PolicyholderConsoleView();
-        System.out.println(CustomerSet.getInstance().getCustomers().size());
-        CustomerSet.getInstance().getCustomers().forEach(customer -> {
-            if (customer instanceof Dependant){
-                dview.display(customer);
-            } else {
-                pview.display(customer);
-            }
-        });
-
-        InsuranceCardController icc = new InsuranceCardController(new InsuranceCard(), new InsuranceCardConsoleView());
-
-//        icc.createNewInsuranceCard();
-
-        for (InsuranceCard card : InsuranceCardSet.getInstance().getInsuranceCards()){
-            icc.getView().display(card);
-        }
+//        DependantConsoleView dview = new DependantConsoleView();
+//        PolicyholderConsoleView pview = new PolicyholderConsoleView();
+//        System.out.println(CustomerSet.getInstance().getCustomers().size());
+//        CustomerSet.getInstance().getCustomers().forEach(customer -> {
+//            if (customer instanceof Dependant){
+//                dview.display(customer);
+//            } else {
+//                pview.display(customer);
+//            }
+//        });
+//
+//        InsuranceCardController icc = new InsuranceCardController(new InsuranceCard(), new InsuranceCardConsoleView());
+//
+////        icc.createNewInsuranceCard();
+//
+//        for (InsuranceCard card : InsuranceCardSet.getInstance().getInsuranceCards()){
+//            icc.getView().display(card);
+//        }
 
         ClaimController cc = new ClaimController(new Claim(), new ClaimConsoleView());
 //        cc.createNewClaim();
 
+        System.out.println(ClaimSet.getInstance().getClaims().size());
         for (Claim claim : ClaimSet.getInstance().getClaims()){
             cc.getView().display(claim);
         }

@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package controller.document;
 
 import model.document.Document;

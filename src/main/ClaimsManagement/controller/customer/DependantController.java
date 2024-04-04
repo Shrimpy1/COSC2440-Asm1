@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package controller.customer;
 
 import model.customer.CustomerSet;

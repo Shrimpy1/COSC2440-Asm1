@@ -1,3 +1,6 @@
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
 package controller.banking_info;
 
 import model.banking_info.BankingInfo;
@@ -42,5 +45,13 @@ public class BankingInfoController {
         String number = scanner.nextLine();
 
         setBankingInfo(new BankingInfo(bank, name, number));
+    }
+
+    public void display(){
+        view.display(bankingInfo);
+    }
+
+    public void displaySingleLine(){
+        view.displaySingleLine(bankingInfo);
     }
 }
