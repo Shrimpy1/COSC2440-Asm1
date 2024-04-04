@@ -11,16 +11,16 @@ import view.customer.PolicyholderConsoleView;
 import java.util.Map;
 
 public abstract class PolicyholderController {
-    private Policyholder policyHolder;
+    private Policyholder model;
     private PolicyholderConsoleView view;
 
-    public PolicyholderController(Policyholder policyHolder, PolicyholderConsoleView view) {
-        this.policyHolder = policyHolder;
+    public PolicyholderController(Policyholder model, PolicyholderConsoleView view) {
+        this.model = model;
         this.view = view;
     }
 
-    public void setPolicyHolder(Policyholder policyHolder) {
-        this.policyHolder = policyHolder;
+    public void setModel(Policyholder model) {
+        this.model = model;
     }
 
     public void setView(PolicyholderConsoleView view) {
@@ -34,8 +34,8 @@ public abstract class PolicyholderController {
 
         Policyholder policyholder = new Policyholder(id, fullName);
 
-        setPolicyHolder(policyHolder);
+        setModel(model);
 
-        CustomerSet.getInstance().add(this.policyHolder);
+        CustomerSet.getInstance().add(this.model);
     }
 }

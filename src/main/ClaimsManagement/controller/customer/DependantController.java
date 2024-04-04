@@ -10,16 +10,16 @@ import view.customer.DependantConsoleView;
 import java.util.Map;
 
 public class DependantController {
-    private Dependant dependant;
+    private Dependant model;
     private DependantConsoleView view;
 
-    public DependantController(Dependant dependant, DependantConsoleView view) {
-        this.dependant = dependant;
+    public DependantController(Dependant model, DependantConsoleView view) {
+        this.model = model;
         this.view = view;
     }
 
-    public void setDependant(Dependant dependant) {
-        this.dependant = dependant;
+    public void setModel(Dependant model) {
+        this.model = model;
     }
 
     public void setView(DependantConsoleView view) {
@@ -33,8 +33,8 @@ public class DependantController {
 
         Dependant dependant = new Dependant(id, fullName);
 
-        setDependant(dependant);
+        setModel(dependant);
 
-        CustomerSet.getInstance().add(this.dependant);
+        CustomerSet.getInstance().add(this.model);
     }
 }

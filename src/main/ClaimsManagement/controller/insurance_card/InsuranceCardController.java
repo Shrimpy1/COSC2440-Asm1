@@ -15,16 +15,16 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class InsuranceCardController {
-    private InsuranceCard insuranceCard;
+    private InsuranceCard model;
     private InsuranceCardView view;
 
-    public InsuranceCardController(InsuranceCard insuranceCard, InsuranceCardView view) {
-        this.insuranceCard = insuranceCard;
+    public InsuranceCardController(InsuranceCard model, InsuranceCardView view) {
+        this.model = model;
         this.view = view;
     }
 
-    public void setInsuranceCard(InsuranceCard insuranceCard) {
-        this.insuranceCard = insuranceCard;
+    public void setModel(InsuranceCard model) {
+        this.model = model;
     }
 
     public void setView(InsuranceCardView view) {
@@ -48,13 +48,13 @@ public class InsuranceCardController {
 
         view.display(insuranceCard);
 
-        setInsuranceCard(insuranceCard);
+        setModel(insuranceCard);
 
-        InsuranceCardSet.getInstance().addInsuranceCard(this.insuranceCard);
+        InsuranceCardSet.getInstance().addInsuranceCard(this.model);
     }
 
-    public InsuranceCard getInsuranceCard() {
-        return insuranceCard;
+    public InsuranceCard getModel() {
+        return model;
     }
 
     public InsuranceCardView getView() {

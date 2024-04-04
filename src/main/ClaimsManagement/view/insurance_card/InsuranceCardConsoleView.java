@@ -5,6 +5,7 @@ package view.insurance_card;
 
 import model.insurance_card.InsuranceCard;
 import util.ConsoleInput;
+import util.DateConverter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class InsuranceCardConsoleView extends InsuranceCardView{
         System.out.println("Card Number: " + card.getCardNumber());
         System.out.println("Card Holder: " + card.getCardHolder().getFullName());
         System.out.println("Policy Owner: " + card.getPolicyOwner().getName());
-        System.out.println("Expiration Date: " + card.getExpirationDate());
+        System.out.println("Expiration Date: " + DateConverter.localDateToString(card.getExpirationDate()));
         System.out.println();
     }
 

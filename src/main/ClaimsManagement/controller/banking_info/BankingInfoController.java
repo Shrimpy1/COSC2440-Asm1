@@ -10,20 +10,20 @@ import view.banking_info.BankingInfoView;
 import java.util.Scanner;
 
 public class BankingInfoController {
-    private BankingInfo bankingInfo;
+    private BankingInfo model;
     private BankingInfoView view;
 
-    public BankingInfoController(BankingInfo bankingInfo, BankingInfoView view) {
-        this.bankingInfo = bankingInfo;
+    public BankingInfoController(BankingInfo model, BankingInfoView view) {
+        this.model = model;
         this.view = view;
     }
 
-    public BankingInfo getBankingInfo() {
-        return bankingInfo;
+    public BankingInfo getModel() {
+        return model;
     }
 
-    public void setBankingInfo(BankingInfo bankingInfo) {
-        this.bankingInfo = bankingInfo;
+    public void setModel(BankingInfo model) {
+        this.model = model;
     }
 
     public BankingInfoView getView() {
@@ -44,14 +44,14 @@ public class BankingInfoController {
         System.out.print("Number: ");
         String number = scanner.nextLine();
 
-        setBankingInfo(new BankingInfo(bank, name, number));
+        setModel(new BankingInfo(bank, name, number));
     }
 
     public void display(){
-        view.display(bankingInfo);
+        view.display(model);
     }
 
     public void displaySingleLine(){
-        view.displaySingleLine(bankingInfo);
+        view.displaySingleLine(model);
     }
 }

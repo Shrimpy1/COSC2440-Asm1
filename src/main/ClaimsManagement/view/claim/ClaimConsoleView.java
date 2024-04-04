@@ -7,6 +7,7 @@ import model.banking_info.BankingInfo;
 import model.claim.Claim;
 import model.document.Document;
 import util.ConsoleInput;
+import util.DateConverter;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,10 +19,10 @@ public class ClaimConsoleView extends ClaimView {
     @Override
     public void display(Claim claim) {
         System.out.println("Claim ID: " + claim.getId());
-        System.out.println("Claim Date: " + claim.getClaimDate());
+        System.out.println("Claim Date: " + DateConverter.localDateToString(claim.getClaimDate()));
         System.out.println("Insured Person: " + claim.getInsuredPerson().getFullName());
         System.out.println("Card Number: " + claim.getCardNumber());
-        System.out.println("Exam Date: " + claim.getExamDate());
+        System.out.println("Exam Date: " + DateConverter.localDateToString(claim.getExamDate()));
         List<Document> documentList = claim.getDocuments();
         String documents = documentList.stream().map(Document::getFileName).collect(Collectors.joining(", ")); // Get all Documents name in a string split by ','
         String claimAmount = String.valueOf(claim.getClaimAmount());
