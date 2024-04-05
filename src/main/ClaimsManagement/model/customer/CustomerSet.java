@@ -20,7 +20,6 @@ public class CustomerSet{
     public static CustomerSet getInstance(){
         if (instance == null){
             instance = new CustomerSet();
-            instance.loadData();
         }
         return instance;
     }
@@ -57,7 +56,7 @@ public class CustomerSet{
         System.out.println(result);
     }
 
-    private void loadData(){
+    public void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<List<Policyholder>>(){}.getType();
         List<Policyholder> policyholderList = fh.loadObjectFromFile("customer.json", type);

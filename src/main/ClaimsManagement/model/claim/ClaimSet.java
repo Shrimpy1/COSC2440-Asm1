@@ -21,7 +21,6 @@ public class ClaimSet {
     public static ClaimSet getInstance() {
         if (instance == null){
             instance = new ClaimSet();
-            instance.loadData();
         }
         return instance;
     }
@@ -51,7 +50,7 @@ public class ClaimSet {
         System.out.println(result);
     }
 
-    private void loadData(){
+    public void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<Set<Claim>>(){}.getType();
         this.claims = fh.loadObjectFromFile("claim.json", type);

@@ -3,7 +3,7 @@
     "id": "f0000000001",
     "claimDate": "2000-01-01",
     "insuredPerson": "123",
-    "cardNumber": "0123",
+    "cardNumber": "123456789",
     "examDate": "1999-01-01",
     "documents": [
       {
@@ -19,6 +19,25 @@
       "bank": "ehe",
       "name": "kiet",
       "number": "123456"
+    }
+  },
+  {
+    "id": "f1234567890",
+    "claimDate": "2001-02-02",
+    "insuredPerson": "012",
+    "cardNumber": "987654321",
+    "examDate": "1999-02-02",
+    "documents": [
+      {
+        "fileName": "asdf.dpf"
+      }
+    ],
+    "claimAmount": 99.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "viettinbank",
+      "name": "tan",
+      "number": "456"
     }
   }
 ]

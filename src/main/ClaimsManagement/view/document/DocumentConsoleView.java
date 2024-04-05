@@ -11,8 +11,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class DocumentConsoleView extends DocumentView{
+    private final Scanner scanner;
+
     public DocumentConsoleView() {
         super();
+        this.scanner = ConsoleInput.getInstance().getScanner();
     }
 
     public void displayFileName(Document document) {
@@ -21,7 +24,6 @@ public class DocumentConsoleView extends DocumentView{
 
     @Override
     public Map<String, String> promptNewDocument(){
-        Scanner scanner = ConsoleInput.getInstance().getScanner();
         Map<String, String> data = new HashMap<String, String>();
         System.out.println("\tNew Document:");
         System.out.println("File name: ");

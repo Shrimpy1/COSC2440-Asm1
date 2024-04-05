@@ -12,8 +12,10 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class InsuranceCardConsoleView extends InsuranceCardView{
+    private final Scanner scanner;
     public InsuranceCardConsoleView() {
         super();
+        this.scanner = ConsoleInput.getInstance().getScanner();
     }
 
     @Override
@@ -28,7 +30,6 @@ public class InsuranceCardConsoleView extends InsuranceCardView{
 
     @Override
     public Map<String, String> displayNewInsuranceCardForm() {
-        Scanner scanner = ConsoleInput.getInstance().getScanner();
         Map<String, String> data = new HashMap<String, String>();
         System.out.println("New Insurance Card Form:");
         System.out.print("Card number: ");

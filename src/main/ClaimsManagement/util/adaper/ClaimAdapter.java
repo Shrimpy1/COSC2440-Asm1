@@ -10,6 +10,7 @@ import model.claim.Claim;
 import model.customer.Customer;
 import model.customer.CustomerSet;
 import model.document.Document;
+import util.claim_process_manager.CustomerClaimProcessManager;
 
 import java.lang.reflect.Type;
 import java.time.LocalDate;
@@ -53,7 +54,10 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
         String status = jsonObject.get("status").getAsString();
         BankingInfo bankingInfo = context.deserialize(jsonObject.get("bankingInfo"), BankingInfo.class);
 
-        Claim claim = new Claim(id, claimDate, insuredPerson, cardNumber, examDate, documents, claimAmount, bankingInfo);
+        Claim claim = new Claim(id, claimDate, cardNumber, examDate, documents, claimAmount, bankingInfo);
+
+        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager();
+        claimManager.add(claim, insuredPerson);
 
         switch (status.toLowerCase()){
             case "new":

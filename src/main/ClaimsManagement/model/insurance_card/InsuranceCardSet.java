@@ -23,7 +23,6 @@ public class InsuranceCardSet {
     public static InsuranceCardSet getInstance(){
         if (instance == null){
             instance = new InsuranceCardSet();
-            instance.loadData();
         }
         return instance;
     }
@@ -53,7 +52,7 @@ public class InsuranceCardSet {
         System.out.println(result);
     }
 
-    private void loadData(){
+    public void loadData(){
         FileHandler fh = FileHandler.getInstance();
         Type type = new TypeToken<Set<InsuranceCard>>(){}.getType();
         this.insuranceCards = fh.loadObjectFromFile("insurance_card.json", type);

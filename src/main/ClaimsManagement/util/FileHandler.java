@@ -45,7 +45,6 @@ public class FileHandler {
 
         try (FileWriter writer = new FileWriter(file)){
             gson.toJson(data, writer);
-            System.out.println("Printed");
             return true;
         } catch (IOException e) {
             e.printStackTrace();;

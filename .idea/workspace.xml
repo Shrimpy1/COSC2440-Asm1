@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="update Claim controller for create new claim">
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/banking_info/BankingInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/banking_info/BankingInfoController.java" afterDir="false" />
+    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="rename all controller's model attribute name to &quot;model&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/Menu/ClaimMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/Menu/MainMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/Menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/ClaimInteractionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/CustomerClaimProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/claim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/claim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/claim/ClaimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/PolicyholderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/document/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/document/DocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/insurance_card/InsuranceCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/ClaimProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/ClaimProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/MenuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/MenuManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/System.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/ClaimSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/document/DocumentConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/document/DocumentConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -168,7 +187,8 @@
       <workItem from="1712239725597" duration="629000" />
       <workItem from="1712240380745" duration="6738000" />
       <workItem from="1712252944739" duration="2716000" />
-      <workItem from="1712255680053" duration="1812000" />
+      <workItem from="1712255680053" duration="2307000" />
+      <workItem from="1712320732663" duration="19919000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -274,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712256650389</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="rename all controller's model attribute name to &quot;model&quot;">
+      <option name="closed" value="true" />
+      <created>1712258187296</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712258187296</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +328,22 @@
     <MESSAGE value="update Document view and controller" />
     <MESSAGE value="update BankingInfo view and controller" />
     <MESSAGE value="update Claim controller for create new claim" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Claim controller for create new claim" />
+    <MESSAGE value="rename all controller's model attribute name to &quot;model&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename all controller's model attribute name to &quot;model&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/ClaimsManagement/util/ConsoleInput.java</url>
+          <line>15</line>
+          <properties class="util.ConsoleInput" method="getInstance">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

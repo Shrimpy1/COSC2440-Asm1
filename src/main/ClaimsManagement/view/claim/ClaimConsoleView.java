@@ -9,15 +9,20 @@ import model.document.Document;
 import util.ConsoleInput;
 import util.DateConverter;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ClaimConsoleView extends ClaimView {
+    private final Scanner scanner;
+
+    public ClaimConsoleView() {
+        super();
+        this.scanner = ConsoleInput.getInstance().getScanner();
+    }
+
     @Override
     public void display(Claim claim) {
+        System.out.println("\tClaim Information:");
         System.out.println("Claim ID: " + claim.getId());
         System.out.println("Claim Date: " + DateConverter.localDateToString(claim.getClaimDate()));
         System.out.println("Insured Person: " + claim.getInsuredPerson().getFullName());
@@ -34,7 +39,6 @@ public class ClaimConsoleView extends ClaimView {
 
     @Override
     public Map<String, String> displayNewClaimForm() {
-        Scanner scanner = ConsoleInput.getInstance().getScanner();
         Map<String, String> data = new HashMap<String, String>();
         System.out.println("\tNew Claim Form: ");
         System.out.print("Claim ID (format f-10 number): ");
@@ -50,5 +54,50 @@ public class ClaimConsoleView extends ClaimView {
         System.out.print("Claim Amount: ");
         data.put(CLAIM_AMOUNT, scanner.nextLine());
         return data;
+    }
+
+    @Override
+    public int displayUpdateOptions(){
+        System.out.println("Choose an option to update: ");
+        Map<Integer, String> options = new TreeMap<Integer, String>();
+        options.put(1, "Claim ID");
+        options.put(2, "Card Number");
+        options.put(3, "Claim Date");
+        options.put(4, "Exam Date");
+        options.put(5, "Claim Amount");
+        options.put(6, "Document");
+        options.put(7, "Receiver Banking Info");
+        displayOptions(options);
+        System.out.print("Enter your choice (0 to return): ");
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        return choice;
+    }
+
+    @Override
+    public String promptNewInfo(String field){
+        System.out.printf("Enter new %s:", field);
+        return scanner.nextLine();
+    }
+
+    @Override
+    public int displayDocumentOptions() {
+        System.out.println("Choose an option: ");
+        Map<Integer, String> options = new TreeMap<Integer, String>();
+        options.put(1, "Add Document");
+        options.put(2, "Remove Document");
+        displayOptions(options);
+
+        System.out.print("Enter your choice (0 to return): ");
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        return choice;
+    }
+
+    @Override
+    public void displayOptions(Map<Integer, String> options) {
+        for (Integer key : options.keySet()){
+            System.out.printf("%d. %s%n", key, options.get(key));
+        }
     }
 }

@@ -12,6 +12,7 @@ import model.document.Document;
 import model.banking_info.BankingInfo;
 import util.ConsoleInput;
 import util.DateConverter;
+import util.claim_process_manager.CustomerClaimProcessManager;
 import view.banking_info.BankingInfoConsoleView;
 import view.claim.ClaimView;
 import model.claim.Claim;
@@ -46,6 +47,26 @@ public class ClaimController {
         this.view = view;
     }
 
+    public void setId(String id){
+        this.model.setId(id);
+    }
+
+    public void setCardNumber(String cardNumber){
+        this.model.setCardNumber(cardNumber);
+    }
+
+    public void setExamDate(LocalDate examDate){
+        this.model.setExamDate(examDate);
+    }
+
+    public void setClaimDate(LocalDate claimDate){
+        this.model.setClaimDate(claimDate);
+    }
+
+    public void setClaimAmount(double claimAmount){
+        this.model.setClaimAmount(claimAmount);
+    }
+
     public void createNewClaim(){
         Map<String, String> data = view.displayNewClaimForm();
         String id = data.get(ClaimView.CLAIM_ID);
@@ -60,12 +81,13 @@ public class ClaimController {
 
         Claim claim = new Claim(id, claimDate, cardNumber, examDate, claimAmount);
 
-        insuredPerson.addClaim(claim);
-
         setModel(claim);
 
         addNewDocumentLoop();
-        addNewBankingInfo();
+        setNewBankingInfo();
+
+        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager();
+        claimManager.add(claim, insuredPerson);
 
         display();
 
@@ -75,6 +97,7 @@ public class ClaimController {
     public void addDocument(Document document){
         this.model.addDocument(document);
     }
+    public void removeDocument(Document document){this.model.removeDocument(document);}
 
     public void addNewDocumentLoop(){
         System.out.println("\tDocuments:");
@@ -95,7 +118,7 @@ public class ClaimController {
         this.model.setReceiverBankingInfo(bankingInfo);
     }
 
-    public void addNewBankingInfo(){
+    public void setNewBankingInfo(){
         BankingInfoController bic = new BankingInfoController(new BankingInfo(), new BankingInfoConsoleView());
         bic.promptBankingInfo();
         setBankingInfo(bic.getModel());
@@ -103,5 +126,56 @@ public class ClaimController {
 
     public void display(){
         view.display(model);
+    }
+
+    public void updateModel(){
+        int choice = view.displayUpdateOptions();
+        String data = "";
+        switch (choice){
+            case 1:
+                data = view.promptNewInfo("Claim ID");
+                setId(data);
+                break;
+            case 2:
+                data = view.promptNewInfo("Card Number");
+                setCardNumber(data);
+                break;
+            case 3:
+                data = view.promptNewInfo("Exam Date (yyyy-MM-dd)");
+                setExamDate(DateConverter.stringToLocalDate(data));
+                break;
+            case 4:
+                data = view.promptNewInfo("Claim Date (yyyy-MM-dd)");
+                setClaimDate(DateConverter.stringToLocalDate(data));
+                break;
+            case 5:
+                data = view.promptNewInfo("Claim Amount");
+                setClaimAmount(Double.parseDouble(data));
+                break;
+            case 6:
+                updateDocuments();
+                break;
+            case 7:
+                setNewBankingInfo();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void updateDocuments(){
+        int choice = view.displayDocumentOptions();
+        switch (choice){
+            case 1:
+                addNewDocumentLoop();
+                break;
+            case 2:
+                String newData = view.promptNewInfo("Document File Name");
+                Document document = new Document(newData);
+                removeDocument(document);
+                break;
+            default:
+                break;
+        }
     }
 }

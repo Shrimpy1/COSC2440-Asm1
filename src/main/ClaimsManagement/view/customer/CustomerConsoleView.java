@@ -13,8 +13,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class CustomerConsoleView extends CustomerView{
+    private final Scanner scanner;
+
     public CustomerConsoleView() {
         super();
+        this.scanner = ConsoleInput.getInstance().getScanner();
     }
 
     @Override
@@ -30,7 +33,6 @@ public class CustomerConsoleView extends CustomerView{
 
     @Override
     public Map<String, String> displayNewCustomerForm() {
-        Scanner scanner = ConsoleInput.getInstance().getScanner();
         Map<String, String> data = new HashMap<String, String>();
         System.out.print("Customer Id: ");
         data.put(CUSTOMER_ID, scanner.nextLine());

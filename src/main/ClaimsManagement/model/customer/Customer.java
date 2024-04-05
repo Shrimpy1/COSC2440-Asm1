@@ -61,7 +61,6 @@ public abstract class Customer {
 
     public void addClaim(Claim claim){
         this.claims.add(claim);
-        claim.setInsuredPerson(this);
     }
 
     @Override

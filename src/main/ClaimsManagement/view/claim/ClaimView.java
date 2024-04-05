@@ -18,7 +18,13 @@ public abstract class ClaimView {
     public static final String STATUS = "STATUS";
     public static final String RECEIVER_BANK_INFO = "RECEIVER_BANK_INFO";
 
-    public abstract void display(Claim claim);
+    public ClaimView() {
+    }
 
+    public abstract void display(Claim claim);
     public abstract Map<String, String> displayNewClaimForm();
+    public abstract int displayUpdateOptions();
+    public abstract String promptNewInfo(String field);
+    public abstract int displayDocumentOptions();
+    public abstract void displayOptions(Map<Integer, String> options);
 }
