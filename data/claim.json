@@ -2,42 +2,310 @@
   {
     "id": "f0000000001",
     "claimDate": "2000-01-01",
-    "insuredPerson": "123",
-    "cardNumber": "123456789",
+    "insuredPerson": "c0000010",
+    "cardNumber": "5874932016",
     "examDate": "1999-01-01",
     "documents": [
       {
-        "fileName": "abc"
+        "fileName": "claim_form.pdf"
       },
       {
-        "fileName": "abcde"
+        "fileName": "police_report.pdf"
       }
     ],
     "claimAmount": 123.0,
     "status": "NEW",
     "bankingInfo": {
-      "bank": "ehe",
-      "name": "kiet",
-      "number": "123456"
+      "bank": "Vietcombank",
+      "name": "Jackie White",
+      "number": "591837264019"
     }
   },
   {
-    "id": "f1234567890",
-    "claimDate": "2001-02-02",
-    "insuredPerson": "012",
-    "cardNumber": "987654321",
-    "examDate": "1999-02-02",
+    "id": "f0000000002",
+    "claimDate": "2003-03-03",
+    "insuredPerson": "c0000003",
+    "cardNumber": "9021837465",
+    "examDate": "2002-03-03",
     "documents": [
       {
-        "fileName": "asdf.dpf"
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "medical_report.pdf"
       }
     ],
-    "claimAmount": 99.0,
+    "claimAmount": 145.5,
     "status": "NEW",
     "bankingInfo": {
-      "bank": "viettinbank",
-      "name": "tan",
-      "number": "456"
+      "bank": "Vietcombank",
+      "name": "Charlie Brown",
+      "number": "480726158932"
+    }
+  },
+  {
+    "id": "f0000000003",
+    "claimDate": "2004-04-04",
+    "insuredPerson": "c0000006",
+    "cardNumber": "6428903715",
+    "examDate": "2003-04-04",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 200.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "Vietcombank",
+      "name": "Frank Wilson",
+      "number": "703914862570"
+    }
+  },
+  {
+    "id": "f0000000004",
+    "claimDate": "2005-05-05",
+    "insuredPerson": "c0000007",
+    "cardNumber": "3650149278",
+    "examDate": "2004-05-05",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "proof_of_loss.pdf"
+      }
+    ],
+    "claimAmount": 175.25,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "BIDV",
+      "name": "Gina Rodriguez",
+      "number": "215049386721"
+    }
+  },
+  {
+    "id": "f0000000005",
+    "claimDate": "2006-06-06",
+    "insuredPerson": "c0000009",
+    "cardNumber": "7205984613",
+    "examDate": "2005-06-06",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 80.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "VietinBank",
+      "name": "Ivy Lee",
+      "number": "836172490584"
+    }
+  },
+  {
+    "id": "f0000000006",
+    "claimDate": "2007-07-07",
+    "insuredPerson": "c0000002",
+    "cardNumber": "1485720396",
+    "examDate": "2006-07-07",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 150.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "ACB",
+      "name": "Bob Smith",
+      "number": "924705183672"
+    }
+  },
+  {
+    "id": "f0000000007",
+    "claimDate": "2008-08-08",
+    "insuredPerson": "c0000004",
+    "cardNumber": "8109325746",
+    "examDate": "2007-08-08",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "death_certificate.pdf"
+      }
+    ],
+    "claimAmount": 210.75,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "BIDV",
+      "name": "Diana Miller",
+      "number": "370591862430"
+    }
+  },
+  {
+    "id": "f0000000008",
+    "claimDate": "2009-09-09",
+    "insuredPerson": "c0000001",
+    "cardNumber": "6738295140",
+    "examDate": "2008-09-09",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 95.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "Vietcombank",
+      "name": "Alice Johnson",
+      "number": "681529347206"
+    }
+  },
+  {
+    "id": "f0000000009",
+    "claimDate": "2010-10-10",
+    "insuredPerson": "c0000005",
+    "cardNumber": "2567891043",
+    "examDate": "2009-10-10",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "police_report.pdf"
+      }
+    ],
+    "claimAmount": 180.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "Techcombank",
+      "name": "Eva Martinez",
+      "number": "159246830742"
+    }
+  },
+  {
+    "id": "f0000000010",
+    "claimDate": "2011-11-11",
+    "insuredPerson": "c0000012",
+    "cardNumber": "9367258104",
+    "examDate": "2010-11-11",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 120.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "Techcombank",
+      "name": "Nora Adams",
+      "number": "470385692174"
+    }
+  },
+  {
+    "id": "f0000000011",
+    "claimDate": "2012-12-12",
+    "insuredPerson": "c0000013",
+    "cardNumber": "1476092385",
+    "examDate": "2011-12-12",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "medical_bills.pdf"
+      }
+    ],
+    "claimAmount": 230.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "Techcombank",
+      "name": "Kelly Davis",
+      "number": "362801594728"
+    }
+  },
+  {
+    "id": "f0000000012",
+    "claimDate": "2013-01-01",
+    "insuredPerson": "c0000011",
+    "cardNumber": "3809156274",
+    "examDate": "2012-01-01",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 185.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "VietinBank",
+      "name": "Oscar Clark",
+      "number": "805927463210"
+    }
+  },
+  {
+    "id": "f0000000013",
+    "claimDate": "2014-02-02",
+    "insuredPerson": "c0000015",
+    "cardNumber": "4927631850",
+    "examDate": "2013-02-02",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "death_certificate.pdf"
+      }
+    ],
+    "claimAmount": 145.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "BIDV",
+      "name": "Larry Harris",
+      "number": "293746185037"
+    }
+  },
+  {
+    "id": "f0000000014",
+    "claimDate": "2015-03-03",
+    "insuredPerson": "c0000008",
+    "cardNumber": "9845201673",
+    "examDate": "2014-03-03",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      },
+      {
+        "fileName": "medical_report.pdf"
+      }
+    ],
+    "claimAmount": 155.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "VietinBank",
+      "name": "Harry Thompson",
+      "number": "147590283671"
+    }
+  },
+  {
+    "id": "f0000000015",
+    "claimDate": "2016-04-04",
+    "insuredPerson": "c0000014",
+    "cardNumber": "7593018642",
+    "examDate": "2015-04-04",
+    "documents": [
+      {
+        "fileName": "claim_form.pdf"
+      }
+    ],
+    "claimAmount": 165.0,
+    "status": "NEW",
+    "bankingInfo": {
+      "bank": "VietinBank",
+      "name": "Megan Campbell",
+      "number": "680472915836"
     }
   }
 ]

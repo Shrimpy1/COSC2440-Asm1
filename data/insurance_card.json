@@ -1,18 +1,122 @@
 [
   {
-    "cardNumber": "0123",
-    "cardHolder": "123",
+    "cardNumber": "5874932016",
+    "cardHolder": "c0000010",
     "policyOwner": {
-      "name": "bulubala"
+      "name": "RMIT"
     },
-    "expirationDate": "2000-01-01"
+    "expirationDate": "2024-01-01"
   },
   {
-    "cardNumber": "0124",
-    "cardHolder": "012",
+    "cardNumber": "9021837465",
+    "cardHolder": "c0000003",
     "policyOwner": {
-      "name": "ehe"
+      "name": "Apple Inc."
     },
-    "expirationDate": "5000-05-05"
+    "expirationDate": "2024-02-02"
+  },
+  {
+    "cardNumber": "6428903715",
+    "cardHolder": "c0000006",
+    "policyOwner": {
+      "name": "Amazon"
+    },
+    "expirationDate": "2024-03-03"
+  },
+  {
+    "cardNumber": "3650149278",
+    "cardHolder": "c0000007",
+    "policyOwner": {
+      "name": "Microsoft"
+    },
+    "expirationDate": "2024-04-04"
+  },
+  {
+    "cardNumber": "7205984613",
+    "cardHolder": "c0000009",
+    "policyOwner": {
+      "name": "RMIT"
+    },
+    "expirationDate": "2024-05-05"
+  },
+  {
+    "cardNumber": "1485720396",
+    "cardHolder": "c0000002",
+    "policyOwner": {
+      "name": "Samsung Electronics"
+    },
+    "expirationDate": "2024-06-06"
+  },
+  {
+    "cardNumber": "8109325746",
+    "cardHolder": "c0000004",
+    "policyOwner": {
+      "name": "Tesla Inc."
+    },
+    "expirationDate": "2024-07-07"
+  },
+  {
+    "cardNumber": "6738295140",
+    "cardHolder": "c0000001",
+    "policyOwner": {
+      "name": "Samsung Electronics"
+    },
+    "expirationDate": "2024-08-08"
+  },
+  {
+    "cardNumber": "2567891043",
+    "cardHolder": "c0000005",
+    "policyOwner": {
+      "name": "Tencent Holdings"
+    },
+    "expirationDate": "2024-09-09"
+  },
+  {
+    "cardNumber": "9367258104",
+    "cardHolder": "c0000012",
+    "policyOwner": {
+      "name": "Tesla Inc."
+    },
+    "expirationDate": "2024-10-10"
+  },
+  {
+    "cardNumber": "1476092385",
+    "cardHolder": "c0000013",
+    "policyOwner": {
+      "name": "Netflix"
+    },
+    "expirationDate": "2024-11-11"
+  },
+  {
+    "cardNumber": "3809156274",
+    "cardHolder": "c0000011",
+    "policyOwner": {
+      "name": "Microsoft"
+    },
+    "expirationDate": "2024-12-12"
+  },
+  {
+    "cardNumber": "4927631850",
+    "cardHolder": "c0000015",
+    "policyOwner": {
+      "name": "Sony Corporation"
+    },
+    "expirationDate": "2025-01-01"
+  },
+  {
+    "cardNumber": "9845201673",
+    "cardHolder": "c0000008",
+    "policyOwner": {
+      "name": "Toyota Motor Corporation"
+    },
+    "expirationDate": "2025-02-02"
+  },
+  {
+    "cardNumber": "7593018642",
+    "cardHolder": "c0000014",
+    "policyOwner": {
+      "name": "Apple Inc."
+    },
+    "expirationDate": "2025-03-03"
   }
 ]
