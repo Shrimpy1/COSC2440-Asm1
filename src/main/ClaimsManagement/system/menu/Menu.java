@@ -1,4 +1,7 @@
-package system.Menu;
+/**
+ * @author Nguyen Ich Kiet - s3978724
+ */
+package system.menu;
 
 import util.ConsoleInput;
 
@@ -17,12 +20,17 @@ public abstract class Menu {
         initialize();
     }
 
-    public abstract void display();
-    public void displayOptions() {
+    public void display(){
         for (Integer key : options.keySet()){
             System.out.printf("%d. %s%n", key, options.get(key));
         }
-    }
-    public abstract Menu handleUserInput(int choice);
+    };
+
+    public abstract Menu handleUserInput(String choice);
+
     public abstract void initialize();
+
+    public Map<Integer, String> getOptions() {
+        return options;
+    }
 }

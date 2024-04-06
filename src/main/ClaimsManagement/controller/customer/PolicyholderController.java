@@ -3,14 +3,18 @@
  */
 package controller.customer;
 
+import model.claim.Claim;
+import model.customer.Customer;
 import model.customer.CustomerSet;
+import model.customer.Dependant;
 import model.customer.Policyholder;
 import view.customer.CustomerView;
 import view.customer.PolicyholderConsoleView;
 
+import java.util.List;
 import java.util.Map;
 
-public abstract class PolicyholderController {
+public class PolicyholderController implements CustomerController{
     private Policyholder model;
     private PolicyholderConsoleView view;
 
@@ -19,12 +23,55 @@ public abstract class PolicyholderController {
         this.view = view;
     }
 
-    public void setModel(Policyholder model) {
-        this.model = model;
+    @Override
+    public Customer getModel(){
+        return this.model;
     }
 
-    public void setView(PolicyholderConsoleView view) {
-        this.view = view;
+    @Override
+    public void setModel(Customer model) {
+        this.model = (Policyholder) model;
+    }
+
+    @Override
+    public CustomerView getView(){
+        return this.view;
+    }
+
+    @Override
+    public void setView(CustomerView view) {
+        this.view = (PolicyholderConsoleView) view;
+    }
+
+    @Override
+    public void display(){
+        view.display(model);
+    }
+
+    @Override
+    public void displaySummary() {
+        this.view.displaySummary(model);
+    }
+
+    @Override
+    public void addClaim(Claim claim) {
+        this.model.addClaim(claim);
+        for (Dependant dependant : this.model.getDependants()){
+            dependant.addClaim(claim);
+        }
+    }
+
+    @Override
+    public void removeClaim(Claim claim) {
+        this.model.removeClaim(claim);
+        for (Dependant dependant : this.model.getDependants()){
+            dependant.removeClaim(claim);
+        }
+    }
+
+    @Override
+    public List<Claim> getClaims() {
+        return this.model.getClaims();
     }
 
     public void createNewPolicyHolder(){

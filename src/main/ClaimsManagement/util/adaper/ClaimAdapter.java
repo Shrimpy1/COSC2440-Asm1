@@ -56,8 +56,8 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
 
         Claim claim = new Claim(id, claimDate, cardNumber, examDate, documents, claimAmount, bankingInfo);
 
-        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager();
-        claimManager.add(claim, insuredPerson);
+        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager(insuredPerson);
+        claimManager.add(claim);
 
         switch (status.toLowerCase()){
             case "new":

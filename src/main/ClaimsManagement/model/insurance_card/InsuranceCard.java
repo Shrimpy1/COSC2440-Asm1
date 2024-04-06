@@ -14,6 +14,7 @@ public class InsuranceCard {
     private PolicyOwner policyOwner;
     private LocalDate expirationDate;
 
+    // Constructors
     public InsuranceCard() {
         this.cardNumber = "";
     }
@@ -25,6 +26,7 @@ public class InsuranceCard {
         this.expirationDate = expirationDate;
     }
 
+    // Getters
     public String getCardNumber() {
         return cardNumber;
     }
@@ -41,10 +43,12 @@ public class InsuranceCard {
         return expirationDate;
     }
 
+    // Setters
     public void setCardHolder(Customer cardHolder) {
         this.cardHolder = cardHolder;
     }
 
+    // toString
     @Override
     public String toString() {
         return "InsuranceCard{" +

@@ -8,9 +8,10 @@ import model.customer.Customer;
 
 import java.util.*;
 public interface ClaimProcessManager {
-    public boolean add(Claim claim, Customer customer);
+    public boolean add(Claim claim);
     public boolean update(Claim claim);
-    public boolean delete(Claim claim, Customer customer);
-    public Claim getOne(String id, Customer customer);
+    public boolean remove(Claim claim);
+    public boolean delete(Claim claim);
+    public Claim getOne(String id);
     public List<Claim> getAll();
 }

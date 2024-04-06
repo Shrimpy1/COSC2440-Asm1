@@ -14,8 +14,15 @@ public class DependantConsoleView extends CustomerConsoleView{
 
     @Override
     public void display(Customer dependant) {
-        System.out.println("Dependant information: ");
+        System.out.println("\tDependant information: ");
         super.display(dependant);
+        System.out.println();
+    }
+
+    @Override
+    public void displaySummary(Customer dependant) {
+        System.out.println("\tDependant information: ");
+        super.displaySummary(dependant);
         System.out.println();
     }
 

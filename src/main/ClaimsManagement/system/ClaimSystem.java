@@ -20,6 +20,8 @@ public class ClaimSystem {
         CustomerSet.getInstance().loadData();
         InsuranceCardSet.getInstance().loadData();
         ClaimSet.getInstance().loadData();
+
+        System.out.println("--- WELCOME TO CLAIM MANAGEMENT SYSTEM ---");
     }
 
     public void saveData(){

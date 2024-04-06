@@ -23,12 +23,24 @@ public class InsuranceCardController {
         this.view = view;
     }
 
+    public InsuranceCard getModel() {
+        return model;
+    }
+
+    public InsuranceCardView getView() {
+        return view;
+    }
+
     public void setModel(InsuranceCard model) {
         this.model = model;
     }
 
     public void setView(InsuranceCardView view) {
         this.view = view;
+    }
+
+    public void display(){
+        this.view.display(model);
     }
 
     public void createNewInsuranceCard(){
@@ -51,13 +63,5 @@ public class InsuranceCardController {
         setModel(insuranceCard);
 
         InsuranceCardSet.getInstance().addInsuranceCard(this.model);
-    }
-
-    public InsuranceCard getModel() {
-        return model;
-    }
-
-    public InsuranceCardView getView() {
-        return view;
     }
 }

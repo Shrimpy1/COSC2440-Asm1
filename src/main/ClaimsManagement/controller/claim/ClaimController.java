@@ -86,8 +86,8 @@ public class ClaimController {
         addNewDocumentLoop();
         setNewBankingInfo();
 
-        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager();
-        claimManager.add(claim, insuredPerson);
+        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager(insuredPerson);
+        claimManager.add(claim);
 
         display();
 
@@ -97,6 +97,7 @@ public class ClaimController {
     public void addDocument(Document document){
         this.model.addDocument(document);
     }
+
     public void removeDocument(Document document){this.model.removeDocument(document);}
 
     public void addNewDocumentLoop(){
@@ -124,52 +125,86 @@ public class ClaimController {
         setBankingInfo(bic.getModel());
     }
 
-    public void display(){
-        view.display(model);
+    public void setStatusNew(){
+        this.model.setStatusNew();
     }
 
-    public void updateModel(){
-        int choice = view.displayUpdateOptions();
-        String data = "";
-        switch (choice){
-            case 1:
-                data = view.promptNewInfo("Claim ID");
-                setId(data);
+    public void setStatusProcessing(){
+        this.model.setStatusProcessing();
+    }
+
+    public void setStatusDone(){
+        this.model.setStatusDone();
+    }
+
+    public void setStatus(String status){
+        switch (status){
+            case "NEW":
+                setStatusNew();
                 break;
-            case 2:
-                data = view.promptNewInfo("Card Number");
-                setCardNumber(data);
+            case "PROCESSING":
+                setStatusProcessing();
                 break;
-            case 3:
-                data = view.promptNewInfo("Exam Date (yyyy-MM-dd)");
-                setExamDate(DateConverter.stringToLocalDate(data));
-                break;
-            case 4:
-                data = view.promptNewInfo("Claim Date (yyyy-MM-dd)");
-                setClaimDate(DateConverter.stringToLocalDate(data));
-                break;
-            case 5:
-                data = view.promptNewInfo("Claim Amount");
-                setClaimAmount(Double.parseDouble(data));
-                break;
-            case 6:
-                updateDocuments();
-                break;
-            case 7:
-                setNewBankingInfo();
-                break;
-            default:
+            case "DONE":
+                setStatusDone();
                 break;
         }
     }
 
-    public void updateDocuments(){
-        int choice = view.displayDocumentOptions();
+    public void display(){
+        view.display(model);
+    }
+
+    public void displaySummary(){
+        view.displaySummary(model);
+    }
+
+    public void updateModel(){
+        String choice = view.displayUpdateOptions();
+        String data = "";
         switch (choice){
-            case 1:
+            case "Claim ID":
+                data = view.promptNewInfo("Claim ID (format f-10 numbers)");
+                setId(data);
+                break;
+            case "Card Number":
+                data = view.promptNewInfo("Card Number");
+                setCardNumber(data);
+                break;
+            case "Claim Date":
+                data = view.promptNewInfo("Exam Date (yyyy-MM-dd)");
+                setExamDate(DateConverter.stringToLocalDate(data));
+                break;
+            case "Exam Date":
+                data = view.promptNewInfo("Claim Date (yyyy-MM-dd)");
+                setClaimDate(DateConverter.stringToLocalDate(data));
+                break;
+            case "Claim Amount":
+                data = view.promptNewInfo("Claim Amount");
+                setClaimAmount(Double.parseDouble(data));
+                break;
+            case "Document":
+                updateDocuments();
+                break;
+            case "Receiver Banking Info":
+                setNewBankingInfo();
+                break;
+            case "Claim Status":
+                String status = view.displayStatusOptions();
+                setStatus(status);
+            default:
+                break;
+        }
+        System.out.println("Claim updated.");
+    }
+
+    public void updateDocuments(){
+        String  choice = view.displayDocumentOptions();
+        switch (choice){
+            case "Add Document":
                 addNewDocumentLoop();
                 break;
-            case 2:
+            case "Remove Document":
                 String newData = view.promptNewInfo("Document File Name");
                 Document document = new Document(newData);
                 removeDocument(document);

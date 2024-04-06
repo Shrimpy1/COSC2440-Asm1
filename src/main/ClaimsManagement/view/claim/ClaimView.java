@@ -22,9 +22,11 @@ public abstract class ClaimView {
     }
 
     public abstract void display(Claim claim);
+    public abstract void displaySummary(Claim claim);
     public abstract Map<String, String> displayNewClaimForm();
-    public abstract int displayUpdateOptions();
+    public abstract String displayUpdateOptions();
+    public abstract String displayStatusOptions();
     public abstract String promptNewInfo(String field);
-    public abstract int displayDocumentOptions();
+    public abstract String displayDocumentOptions();
     public abstract void displayOptions(Map<Integer, String> options);
 }

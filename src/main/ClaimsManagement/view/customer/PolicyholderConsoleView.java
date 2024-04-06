@@ -18,8 +18,19 @@ public class PolicyholderConsoleView extends CustomerConsoleView{
 
     @Override
     public void display(Customer policyHolder) {
-        System.out.println("Policyholder information: ");
+        System.out.println("\tPolicyholder information: ");
         super.display(policyHolder);
+        System.out.println("Dependants: ");
+
+        Set<Dependant> dependants = ((Policyholder) policyHolder).getDependants();
+        dependants.forEach(dependant -> System.out.println("- " + dependant.getFullName()));
+        System.out.println();
+    }
+
+    @Override
+    public void displaySummary(Customer policyHolder) {
+        System.out.println("\tPolicyholder information: ");
+        super.displaySummary(policyHolder);
         System.out.println("Dependants: ");
 
         Set<Dependant> dependants = ((Policyholder) policyHolder).getDependants();

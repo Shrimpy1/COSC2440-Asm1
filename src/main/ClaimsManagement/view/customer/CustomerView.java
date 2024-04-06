@@ -18,5 +18,7 @@ public abstract class CustomerView {
 
     public abstract void display(Customer customer);
 
+    public abstract void displaySummary(Customer customer);
+
     public abstract Map<String, String> displayNewCustomerForm();
 }

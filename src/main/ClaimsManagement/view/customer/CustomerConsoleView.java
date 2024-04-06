@@ -32,6 +32,12 @@ public class CustomerConsoleView extends CustomerView{
     }
 
     @Override
+    public void displaySummary(Customer customer) {
+        System.out.println("Id: " + customer.getId());
+        System.out.println("Full Name: " + customer.getFullName());
+    }
+
+    @Override
     public Map<String, String> displayNewCustomerForm() {
         Map<String, String> data = new HashMap<String, String>();
         System.out.print("Customer Id: ");

@@ -3,8 +3,8 @@
  */
 package system;
 
-import system.Menu.MainMenu;
-import system.Menu.Menu;
+import system.menu.MainMenu;
+import system.menu.Menu;
 import util.ConsoleInput;
 
 import java.util.Scanner;
@@ -20,24 +20,25 @@ public class MenuManager {
     public void run(){
         while (currentMenu != null) {
             currentMenu.display();
-            int choice = getUserChoice();
+            String choice = getUserChoice();
             currentMenu = currentMenu.handleUserInput(choice);
         }
     }
 
-    public int getUserChoice(){
+    public String getUserChoice(){
         int choice;
         while (true) {
             System.out.print("Enter your choice: ");
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
                 scanner.nextLine();
+                System.out.println();
                 break;
             } else {
                 System.out.println("Invalid input. Please enter a number.");
                 scanner.next();
             }
         }
-        return choice;
+        return currentMenu.getOptions().get(choice);
     }
 }

@@ -63,6 +63,10 @@ public abstract class Customer {
         this.claims.add(claim);
     }
 
+    public void removeClaim(Claim claim){
+        this.claims.remove(claim);
+    }
+
     @Override
     public boolean equals(Object o){
         if (this == o) return true;

@@ -50,8 +50,4 @@ public class BankingInfoController {
     public void display(){
         view.display(model);
     }
-
-    public void displaySingleLine(){
-        view.displaySingleLine(model);
-    }
 }
