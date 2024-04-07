@@ -26,10 +26,6 @@ public class DependantController implements CustomerController{
         this.view = view;
     }
 
-    public void display(Dependant dependant){
-        view.display(dependant);
-    }
-
     public void createNewDependant(){
         Map<String, String> data = view.displayNewCustomerForm();
         String id = data.get(CustomerView.CUSTOMER_ID);

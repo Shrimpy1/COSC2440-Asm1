@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="finalize">
+    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="bug fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/claim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/claim.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customer.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/customer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerClaimMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerClaimMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/InsuranceCardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/InsuranceCardMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/InsuranceCardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/InsuranceCardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/CustomerConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/PolicyholderConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/customer/PolicyholderConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/insurance_card/InsuranceCardConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/controller/customer/DependantController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +54,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/controller&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kiet/Downloads/github-copilot-intellij-1.5.2.5345.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -73,7 +63,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Kiet/IdeaProjects/Assignment1/src/main/ClaimsManagement/claim&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -181,7 +171,8 @@
       <workItem from="1712255680053" duration="2307000" />
       <workItem from="1712320732663" duration="21283000" />
       <workItem from="1712400477365" duration="29210000" />
-      <workItem from="1712472331611" duration="9517000" />
+      <workItem from="1712472331611" duration="11755000" />
+      <workItem from="1712504448199" duration="1337000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -359,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712482820606</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="bug fixed">
+      <option name="closed" value="true" />
+      <created>1712486468586</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486468586</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +392,8 @@
     <MESSAGE value="finished all menu" />
     <MESSAGE value="generate sample data" />
     <MESSAGE value="finalize" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
