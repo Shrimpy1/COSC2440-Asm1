@@ -4,7 +4,7 @@
 - DO exit the program by returning back to Main Menu and select Exit option or data will NOT be saved
 
 *APPLICATION GUIDE*
-      View general information of data files/system:
+     View general information of data files/system:
 - Select View from Main Menu
 - Select View all Claim, Customer or Insurance Card
 
