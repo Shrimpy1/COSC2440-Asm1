@@ -1,9 +1,10 @@
 NOTICE BEFORE RUNNING
+
 - Main application files path: src/main/ClaimsManagement
 - data folder must be in the root module folder
 - DO exit the program by returning back to Main Menu and select Exit option or data will NOT be saved
+- APPLICATION GUIDE:
 
-APPLICATION GUIDE
      + View general information of data files/system:
 - Select View from Main Menu
 - Select View all Claim, Customer or Insurance Card
