@@ -3,6 +3,9 @@
  */
 package model.document;
 
+/**
+ * Subclass for Claim. Holding info of a Claim's documents
+ */
 public class Document {
     private String fileName;
 

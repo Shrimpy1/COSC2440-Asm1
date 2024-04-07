@@ -5,13 +5,20 @@ package model.customer;
 
 import model.claim.Claim;
 import model.insurance_card.InsuranceCard;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+/**
+ * One of the main classes of the system
+ */
 public abstract class Customer {
     private String id;
     private String fullName;
-    private transient InsuranceCard insuranceCard;
-    private transient List<Claim> claims;
+    private transient InsuranceCard insuranceCard; // Transient to be excluded from being written to files
+    private transient List<Claim> claims; // Transient to be excluded from being written to files
 
+    // Constructors
     public Customer() {
         this.id = "";
         this.fullName = "";
@@ -37,36 +44,36 @@ public abstract class Customer {
         this.claims = claims;
     }
 
+    // Getters
+    public String getFullName() {
+        return fullName;
+    }
+    public String getId() {
+        return id;
+    }
+    public InsuranceCard getInsuranceCard() {
+        return insuranceCard;
+    }
+    public List<Claim> getClaims() {
+        return claims;
+    }
+
+    //Setters
     public boolean setInsuranceCard(InsuranceCard card){
         this.insuranceCard = card;
         card.setCardHolder(this);
         return true;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public InsuranceCard getInsuranceCard() {
-        return insuranceCard;
-    }
-
-    public List<Claim> getClaims() {
-        return claims;
-    }
-
+    // Manipulate Claim List
     public void addClaim(Claim claim){
         this.claims.add(claim);
     }
-
     public void removeClaim(Claim claim){
         this.claims.remove(claim);
     }
 
+    // Override for Set customization
     @Override
     public boolean equals(Object o){
         if (this == o) return true;

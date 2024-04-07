@@ -3,5 +3,6 @@
  */
 package view.policy_owner;
 
-public class PolicyOwnerConsoleView {
+public class PolicyOwnerConsoleView extends PolicyOwnerView{
+
 }

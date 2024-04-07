@@ -16,13 +16,20 @@ import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Adapter to customize how Gson write & read a Claim object to files
+ * Customization apart from default:
+ * Only use insuredPerson's ID for the written data
+ * This ID when read will be taken to search for the Customer
+ * then this Claim will be added to that Customer
+ */
 public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Claim> {
     @Override
     public JsonElement serialize(Claim src, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("id", src.getId());
         jsonObject.add("claimDate", context.serialize(src.getClaimDate()));
-        jsonObject.addProperty("insuredPerson", src.getInsuredPerson().getId());
+        jsonObject.addProperty("insuredPerson", src.getInsuredPerson().getId()); // Only write the Customer's ID instead of whole object
         jsonObject.addProperty("cardNumber", src.getCardNumber());
         jsonObject.add("examDate", context.serialize(src.getExamDate()));
 
@@ -42,23 +49,26 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
         String id = jsonObject.get("id").getAsString();
         LocalDate claimDate = context.deserialize(jsonObject.get("claimDate"), LocalDate.class);
         String insuredPersonId = jsonObject.get("insuredPerson").getAsString();
+        // Get the Customer with the ID
         Customer insuredPerson = CustomerSet.getInstance().getCustomerById(insuredPersonId);
         String cardNumber = jsonObject.get("cardNumber").getAsString();
         LocalDate examDate = context.deserialize(jsonObject.get("examDate"), LocalDate.class);
-
         JsonArray documentsArray = jsonObject.getAsJsonArray("documents");
-        Type listType = new TypeToken<List<Document>>() {}.getType(); // Get type token for deserialization
+        Type listType = new TypeToken<List<Document>>() {}.getType(); // Get type token for deserialize a List of Document
         List<Document> documents = context.deserialize(documentsArray, listType); // Deserialize the array from data files to List<Document>
 
         double claimAmount = jsonObject.get("claimAmount").getAsDouble();
         String status = jsonObject.get("status").getAsString();
         BankingInfo bankingInfo = context.deserialize(jsonObject.get("bankingInfo"), BankingInfo.class);
 
+        // Construct a Claim
         Claim claim = new Claim(id, claimDate, cardNumber, examDate, documents, claimAmount, bankingInfo);
 
+        // Add the Claim to the right Customer
         CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager(insuredPerson);
         claimManager.add(claim);
 
+        // Set status
         switch (status.toLowerCase()){
             case "new":
                 claim.setStatusNew();

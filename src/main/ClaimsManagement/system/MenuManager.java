@@ -8,15 +8,25 @@ import system.menu.Menu;
 import util.ConsoleInput;
 
 import java.util.Scanner;
+import java.util.TreeMap;
 
+/**
+ * Handle displaying Menus and get user's option
+ */
 public class MenuManager {
     private final Scanner scanner;
     private Menu currentMenu;
+
+    // Constructor
     public MenuManager() {
         this.scanner = ConsoleInput.getInstance().getScanner();
         this.currentMenu = new MainMenu();
     }
 
+    /**
+     * Display Menus
+     * Loop until there is no Menu returned (When user exits program)
+     */
     public void run(){
         while (currentMenu != null) {
             currentMenu.display();
@@ -25,6 +35,11 @@ public class MenuManager {
         }
     }
 
+    /**
+     * Prompt and get user's choice from each Menu
+     * @return String option instead of Integer value
+     * so that reordering options should not cause problem
+     */
     public String getUserChoice(){
         int choice;
         while (true) {
@@ -39,6 +54,11 @@ public class MenuManager {
                 scanner.next();
             }
         }
-        return currentMenu.getOptions().get(choice);
+
+        // Get option Map from current Menu
+        TreeMap<Integer, String> optionsMap = currentMenu.getOptions();
+
+        // Return user's choice
+        return optionsMap.get(choice);
     }
 }

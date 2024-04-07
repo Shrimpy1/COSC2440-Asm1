@@ -10,12 +10,15 @@ import util.ConsoleInput;
 
 import java.util.Scanner;
 
+/**
+ * The SYSTEM
+ * Include initialize and finalize methods
+ */
 public class ClaimSystem {
-    private Scanner scanner;
-    public ClaimSystem() {
-        this.scanner = ConsoleInput.getInstance().getScanner();
-    }
+    // Constructor
+    public ClaimSystem() {}
 
+    // Load data to the Sets
     public void initialize(){
         CustomerSet.getInstance().loadData();
         InsuranceCardSet.getInstance().loadData();
@@ -24,12 +27,14 @@ public class ClaimSystem {
         System.out.println("--- WELCOME TO CLAIM MANAGEMENT SYSTEM ---");
     }
 
+    // Save data from the Sets
     public void saveData(){
         CustomerSet.getInstance().saveData();
         InsuranceCardSet.getInstance().saveData();
         ClaimSet.getInstance().saveData();
     }
 
+    // Run the system
     public void run(){
         MenuManager menu = new MenuManager();
         menu.run();

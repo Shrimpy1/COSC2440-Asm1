@@ -3,12 +3,18 @@
  */
 package model.claim;
 
-import java.util.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 import model.customer.Customer;
 import model.document.Document;
 import model.banking_info.BankingInfo;
 
+/**
+ * One of the main classes of the system
+ */
 public class Claim {
     public enum ClaimStatus {
         NEW,
@@ -25,6 +31,7 @@ public class Claim {
     private ClaimStatus status;
     private BankingInfo receiverBankingInfo;
 
+    // Constructors
     public Claim() {
         this.id = "";
         this.cardNumber = "";
@@ -66,6 +73,7 @@ public class Claim {
         this.receiverBankingInfo = receiverBankingInfo;
     }
 
+    // Getters
     public String getId() {
         return id;
     }
@@ -93,6 +101,8 @@ public class Claim {
     public BankingInfo getReceiverBankingInfo() {
         return receiverBankingInfo;
     }
+
+    // Setters
     public void setStatusNew(){
         this.status = ClaimStatus.NEW;
     }
@@ -102,11 +112,6 @@ public class Claim {
     public void setStatusDone(){
         this.status = ClaimStatus.DONE;
     }
-    public void addDocument(Document document){
-        this.documents.add(document);
-    }
-    public void removeDocument(Document document) {this.documents.remove(document);}
-
     public void setId(String id) {
         this.id = id;
     }
@@ -127,6 +132,22 @@ public class Claim {
     }
     public void setInsuredPerson(Customer insuredPerson) {
         this.insuredPerson = insuredPerson;
+    }
+
+    // Manipulate Document List
+    public void addDocument(Document document){
+        this.documents.add(document);
+    }
+    public void removeDocument(Document document) {this.documents.remove(document);}
+
+    // Override for Set customization
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Claim)) {
+            return false;
+        }
+        return Objects.equals(this.getId(), ((Claim) o).getId());
     }
 
     @Override

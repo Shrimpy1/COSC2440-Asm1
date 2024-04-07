@@ -3,11 +3,16 @@
  */
 package model.insurance_card;
 
+import model.claim.Claim;
 import model.customer.Customer;
 import model.policy_owner.PolicyOwner;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
+/**
+ * One of the main classes of the system
+ */
 public class InsuranceCard {
     private String cardNumber;
     private Customer cardHolder;
@@ -30,15 +35,12 @@ public class InsuranceCard {
     public String getCardNumber() {
         return cardNumber;
     }
-
     public Customer getCardHolder() {
         return cardHolder;
     }
-
     public PolicyOwner getPolicyOwner() {
         return policyOwner;
     }
-
     public LocalDate getExpirationDate() {
         return expirationDate;
     }
@@ -46,6 +48,16 @@ public class InsuranceCard {
     // Setters
     public void setCardHolder(Customer cardHolder) {
         this.cardHolder = cardHolder;
+    }
+
+    // Override for Set customization
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof InsuranceCard)) {
+            return false;
+        }
+        return Objects.equals(this.getCardNumber(), ((InsuranceCard) o).getCardNumber());
     }
 
     // toString

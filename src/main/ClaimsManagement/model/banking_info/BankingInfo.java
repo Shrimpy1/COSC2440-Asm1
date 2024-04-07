@@ -3,10 +3,9 @@
  */
 package model.banking_info;
 
-import util.ConsoleInput;
-
-import java.util.Scanner;
-
+/**
+ * Subclass for Claim. Holding info of a Claim's banking info
+ */
 public class BankingInfo {
     private String bank;
     private String name;

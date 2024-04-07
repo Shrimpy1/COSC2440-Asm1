@@ -12,12 +12,19 @@ import model.policy_owner.PolicyOwner;
 import java.lang.reflect.Type;
 import java.time.LocalDate;
 
+/**
+ * Adapter to customize how Gson write & read a Claim object to files
+ * Customization apart from default:
+ * Only use cardHolder's ID for the written data
+ * This ID when read will be taken to search for the Customer
+ * then this InsuranceCard will be added to that Customer
+ */
 public class InsuranceCardAdapter implements JsonSerializer<InsuranceCard>, JsonDeserializer<InsuranceCard> {
     @Override
     public JsonElement serialize(InsuranceCard src, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("cardNumber", src.getCardNumber());
-        jsonObject.addProperty("cardHolder", src.getCardHolder().getId());
+        jsonObject.addProperty("cardHolder", src.getCardHolder().getId()); // Only write the Customer's ID instead of whole object
         jsonObject.add("policyOwner", context.serialize(src.getPolicyOwner()));
         jsonObject.add("expirationDate", context.serialize(src.getExpirationDate()));
         return jsonObject;
@@ -28,15 +35,16 @@ public class InsuranceCardAdapter implements JsonSerializer<InsuranceCard>, Json
         JsonObject jsonObject = json.getAsJsonObject();
         String cardNumber = jsonObject.get("cardNumber").getAsString();
         String cardHolderId = jsonObject.get("cardHolder").getAsString();
+        // Get the right Customer
         PolicyOwner policyOwner = context.deserialize(jsonObject.get("policyOwner"), PolicyOwner.class);
         LocalDate expirationDate = context.deserialize(jsonObject.get("expirationDate"), LocalDate.class);
-
         Customer cardHolder = CustomerSet.getInstance().getCustomerById(cardHolderId);
 
+        // Construct InsuranceCard
         InsuranceCard card = new InsuranceCard(cardNumber, null, policyOwner, expirationDate);
 
+        // Add the card to the Customer
         cardHolder.setInsuranceCard(card);
-
         return card;
     }
 }

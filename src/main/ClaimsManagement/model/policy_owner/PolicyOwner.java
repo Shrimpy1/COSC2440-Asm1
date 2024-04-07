@@ -3,6 +3,9 @@
  */
 package model.policy_owner;
 
+/**
+ * Subclass for Claim. Holding info of a Claim's policy owner
+ */
 public class PolicyOwner {
     private String name;
 

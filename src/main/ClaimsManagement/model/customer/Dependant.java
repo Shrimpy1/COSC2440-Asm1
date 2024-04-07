@@ -5,8 +5,15 @@ package model.customer;
 
 import model.claim.Claim;
 import model.insurance_card.InsuranceCard;
-import java.util.*;
+import java.util.List;
+
+/**
+ * One of the main classes of the system
+ * Dependant has no more attributes than Customer
+ */
 public class Dependant extends Customer{
+
+    // Constructors
     public Dependant() {
         super();
     }

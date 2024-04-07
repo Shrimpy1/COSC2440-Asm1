@@ -4,9 +4,11 @@
 package util.claim_process_manager;
 
 import model.claim.Claim;
-import model.customer.Customer;
+import java.util.List;
 
-import java.util.*;
+/**
+ * Interface handling operation for a list of Claims
+ */
 public interface ClaimProcessManager {
     public boolean add(Claim claim);
     public boolean update(Claim claim);

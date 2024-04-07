@@ -8,8 +8,11 @@ import model.claim.Claim;
 import model.claim.ClaimSet;
 import model.customer.Customer;
 import system.menu.Menu;
+import util.ConsoleInput;
 import util.claim_process_manager.CustomerClaimProcessManager;
 import view.claim.ClaimConsoleView;
+
+import java.util.Scanner;
 
 public class CustomerClaimMenu extends Menu {
     private final CustomerClaimProcessManager processManager;
@@ -62,6 +65,7 @@ public class CustomerClaimMenu extends Menu {
     }
 
     public void addClaim(){
+        Scanner scanner = ConsoleInput.getInstance().getScanner();
         System.out.print("Enter Claim Id: ");
         String claimId = scanner.nextLine();
         Claim claim = ClaimSet.getInstance().getClaimById(claimId);
@@ -69,6 +73,7 @@ public class CustomerClaimMenu extends Menu {
     }
 
     public void removeClaim(){
+        Scanner scanner = ConsoleInput.getInstance().getScanner();
         System.out.print("Enter Claim Id: ");
         String claimId = scanner.nextLine();
         Claim claim = processManager.getOne(claimId);

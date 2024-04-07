@@ -12,8 +12,11 @@ import model.customer.Dependant;
 import model.customer.Policyholder;
 import system.menu.ManageMenu;
 import system.menu.Menu;
+import util.ConsoleInput;
 import view.customer.DependantConsoleView;
 import view.customer.PolicyholderConsoleView;
+
+import java.util.Scanner;
 
 public class CustomerMenu extends Menu {
     private CustomerController controller;
@@ -54,6 +57,7 @@ public class CustomerMenu extends Menu {
         Customer customer = null;
 
         while (customer == null) {
+            Scanner scanner = ConsoleInput.getInstance().getScanner();
             System.out.print("Enter Customer ID: ");
             String customerId = scanner.nextLine();
             customer = CustomerSet.getInstance().getCustomerById(customerId);

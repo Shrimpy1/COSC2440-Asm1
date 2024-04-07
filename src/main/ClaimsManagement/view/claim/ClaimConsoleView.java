@@ -7,7 +7,6 @@ import model.claim.Claim;
 import model.document.Document;
 import util.ConsoleInput;
 import util.DateConverter;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
