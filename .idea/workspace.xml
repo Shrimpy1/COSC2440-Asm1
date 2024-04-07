@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="generate sample data">
+    <list default="true" id="df5a41c6-8ddf-4e6c-b332-dae5ed40e23e" name="Changes" comment="finalize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/banking_info/BankingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/banking_info/BankingInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/Claim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/claim/ClaimSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/CustomerSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Dependant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Dependant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Policyholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/customer/Policyholder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/document/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/insurance_card/InsuranceCardSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/model/policy_owner/PolicyOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/model/policy_owner/PolicyOwner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/ClaimSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/ClaimSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/MenuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/MenuManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/ClaimMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/ClaimMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerClaimMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerClaimMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/CustomerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/InsuranceCardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/system/menu/manage_menu/InsuranceCardMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/ClaimAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/InsuranceCardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/InsuranceCardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/LocalDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/adaper/LocalDateAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/ClaimProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/ClaimProcessManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/CustomerClaimProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/util/claim_process_manager/CustomerClaimProcessManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/claim/ClaimConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ClaimsManagement/view/policy_owner/PolicyOwnerConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ClaimsManagement/view/policy_owner/PolicyOwnerConsoleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +170,7 @@
       <workItem from="1712255680053" duration="2307000" />
       <workItem from="1712320732663" duration="21283000" />
       <workItem from="1712400477365" duration="29210000" />
-      <workItem from="1712472331611" duration="4324000" />
+      <workItem from="1712472331611" duration="5530000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <option name="closed" value="true" />
@@ -358,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712426195589</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="finalize">
+      <option name="closed" value="true" />
+      <created>1712480489780</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712480489780</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +373,8 @@
     <MESSAGE value="update main to implement system" />
     <MESSAGE value="finished all menu" />
     <MESSAGE value="generate sample data" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate sample data" />
+    <MESSAGE value="finalize" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

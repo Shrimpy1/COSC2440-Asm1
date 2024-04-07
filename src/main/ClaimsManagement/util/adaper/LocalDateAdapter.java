@@ -4,6 +4,8 @@
 package util.adaper;
 
 import com.google.gson.*;
+import util.DateConverter;
+
 import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -21,11 +23,11 @@ public class LocalDateAdapter implements JsonSerializer<LocalDate>, JsonDeserial
     // Override Gson methods to follow the format
     @Override
     public JsonElement serialize(LocalDate src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(DATE_FORMATTER.format(src));
+        return new JsonPrimitive(DateConverter.localDateToString(src));
     }
 
     @Override
     public LocalDate deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        return LocalDate.parse(json.getAsString(), DATE_FORMATTER);
+        return DateConverter.stringToLocalDate(json.getAsString());
     }
 }
