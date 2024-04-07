@@ -3,6 +3,7 @@
  */
 package view.insurance_card;
 
+import model.customer.Customer;
 import model.insurance_card.InsuranceCard;
 import util.ConsoleInput;
 import util.DateConverter;
@@ -22,7 +23,9 @@ public class InsuranceCardConsoleView extends InsuranceCardView{
     public void display(InsuranceCard card) {
         System.out.println("\tInsurance Card Information:");
         System.out.println("Card Number: " + card.getCardNumber());
-        System.out.println("Card Holder: " + card.getCardHolder().getFullName());
+        // Handle null value
+        Customer cardHolder = card.getCardHolder();
+        System.out.println("Card Holder: " + ((cardHolder != null)?cardHolder.getFullName():"none"));
         System.out.println("Policy Owner: " + card.getPolicyOwner().getName());
         System.out.println("Expiration Date: " + DateConverter.localDateToString(card.getExpirationDate()));
         System.out.println();

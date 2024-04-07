@@ -1,7 +1,5 @@
 [
   {
-    "id": "c0000001",
-    "fullName": "Alice Johnson",
     "dependants": [
       {
         "id": "c0000011",
@@ -11,66 +9,68 @@
         "id": "c0000012",
         "fullName": "Nora Adams"
       }
-    ]
+    ],
+    "id": "c0000001",
+    "fullName": "Alice Johnson"
   },
   {
-    "id": "c0000002",
-    "fullName": "Bob Smith",
-    "dependants": [
-      {
-        "id": "c0000013",
-        "fullName": "Kelly Davis"
-      }
-    ]
-  },
-  {
-    "id": "c0000003",
-    "fullName": "Charlie Brown",
-    "dependants": []
-  },
-  {
-    "id": "c0000004",
-    "fullName": "Diana Miller",
-    "dependants": []
-  },
-  {
-    "id": "c0000005",
-    "fullName": "Eva Martinez",
-    "dependants": []
-  },
-  {
-    "id": "c0000006",
-    "fullName": "Frank Wilson",
     "dependants": [
       {
         "id": "c0000014",
         "fullName": "Megan Campbell"
       }
-    ]
+    ],
+    "id": "c0000006",
+    "fullName": "Frank Wilson"
   },
   {
-    "id": "c0000007",
-    "fullName": "Gina Rodriguez",
-    "dependants": []
+    "dependants": [
+      {
+        "id": "c0000013",
+        "fullName": "Kelly Davis"
+      }
+    ],
+    "id": "c0000002",
+    "fullName": "Bob Smith"
   },
   {
-    "id": "c0000008",
-    "fullName": "Harry Thompson",
+    "dependants": [],
+    "id": "c0000004",
+    "fullName": "Diana Miller"
+  },
+  {
+    "dependants": [],
+    "id": "c0000009",
+    "fullName": "Ivy Lee"
+  },
+  {
     "dependants": [
       {
         "id": "c0000015",
         "fullName": "Larry Harris"
       }
-    ]
+    ],
+    "id": "c0000008",
+    "fullName": "Harry Thompson"
   },
   {
-    "id": "c0000009",
-    "fullName": "Ivy Lee",
-    "dependants": []
+    "dependants": [],
+    "id": "c0000007",
+    "fullName": "Gina Rodriguez"
   },
   {
+    "dependants": [],
+    "id": "c0000005",
+    "fullName": "Eva Martinez"
+  },
+  {
+    "dependants": [],
     "id": "c0000010",
-    "fullName": "Jackie White",
-    "dependants": []
+    "fullName": "Jackie White"
+  },
+  {
+    "dependants": [],
+    "id": "c0000003",
+    "fullName": "Charlie Brown"
   }
 ]

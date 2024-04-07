@@ -12,6 +12,7 @@ import util.ConsoleInput;
 import util.claim_process_manager.CustomerClaimProcessManager;
 import view.claim.ClaimConsoleView;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class CustomerClaimMenu extends Menu {
@@ -58,25 +59,42 @@ public class CustomerClaimMenu extends Menu {
     }
 
     public void viewAllClaim(){
-        for (Claim claim : processManager.getAll()){
-            claimController.setModel(claim);
-            claimController.display();
+        List<Claim> claimList = processManager.getAll();
+
+        if (claimList.isEmpty()){
+            System.out.println("This customer currently has no Claims.");
+        } else {
+            for (Claim claim : claimList){
+                claimController.setModel(claim);
+                claimController.display();
+            }
         };
     }
 
     public void addClaim(){
         Scanner scanner = ConsoleInput.getInstance().getScanner();
-        System.out.print("Enter Claim Id: ");
-        String claimId = scanner.nextLine();
-        Claim claim = ClaimSet.getInstance().getClaimById(claimId);
+        Claim claim = null;
+
+        while (claim == null){
+            System.out.print("Enter Claim Id: ");
+            String claimId = scanner.nextLine();
+            claim = ClaimSet.getInstance().getClaimById(claimId);
+        }
+
         processManager.add(claim);
+        System.out.println("Claim has been added to the Customer.");
     }
 
     public void removeClaim(){
         Scanner scanner = ConsoleInput.getInstance().getScanner();
-        System.out.print("Enter Claim Id: ");
-        String claimId = scanner.nextLine();
-        Claim claim = processManager.getOne(claimId);
+        Claim claim = null;
+        while (claim == null){
+            System.out.print("Enter Claim Id: ");
+            String claimId = scanner.nextLine();
+            claim = processManager.getOne(claimId);
+        }
+
         processManager.remove(claim);
+        System.out.println("Claim has been removed from the Customer.");
     }
 }

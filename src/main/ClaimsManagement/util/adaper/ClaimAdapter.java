@@ -29,7 +29,8 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("id", src.getId());
         jsonObject.add("claimDate", context.serialize(src.getClaimDate()));
-        jsonObject.addProperty("insuredPerson", src.getInsuredPerson().getId()); // Only write the Customer's ID instead of whole object
+        // Only write the Customer's ID instead of whole object. if claim has no insured person, write nothing
+        jsonObject.addProperty("insuredPerson", (src.getInsuredPerson() != null)?src.getInsuredPerson().getId():"");
         jsonObject.addProperty("cardNumber", src.getCardNumber());
         jsonObject.add("examDate", context.serialize(src.getExamDate()));
 
@@ -49,8 +50,7 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
         String id = jsonObject.get("id").getAsString();
         LocalDate claimDate = context.deserialize(jsonObject.get("claimDate"), LocalDate.class);
         String insuredPersonId = jsonObject.get("insuredPerson").getAsString();
-        // Get the Customer with the ID
-        Customer insuredPerson = CustomerSet.getInstance().getCustomerById(insuredPersonId);
+
         String cardNumber = jsonObject.get("cardNumber").getAsString();
         LocalDate examDate = context.deserialize(jsonObject.get("examDate"), LocalDate.class);
         JsonArray documentsArray = jsonObject.getAsJsonArray("documents");
@@ -65,8 +65,13 @@ public class ClaimAdapter implements JsonSerializer<Claim>, JsonDeserializer<Cla
         Claim claim = new Claim(id, claimDate, cardNumber, examDate, documents, claimAmount, bankingInfo);
 
         // Add the Claim to the right Customer
-        CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager(insuredPerson);
-        claimManager.add(claim);
+        // Handle null value
+        if (!insuredPersonId.isEmpty()) {
+            // Get the Customer with the ID from data file
+            Customer insuredPerson = CustomerSet.getInstance().getCustomerById(insuredPersonId);
+            CustomerClaimProcessManager claimManager = new CustomerClaimProcessManager(insuredPerson);
+            claimManager.add(claim);
+        }
 
         // Set status
         switch (status.toLowerCase()){

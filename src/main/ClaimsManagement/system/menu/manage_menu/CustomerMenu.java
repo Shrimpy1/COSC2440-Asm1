@@ -41,9 +41,11 @@ public class CustomerMenu extends Menu {
     public Menu handleUserInput(String choice) {
         switch (choice){
             case "View Customer Detail":
+                getCustomerById();
                 controller.display();
                 break;
             case "Manage Customer Claim List":
+                getCustomerById();
                 return new CustomerClaimMenu(controller.getModel());
             case "Back to Manage Menu":
                 return new ManageMenu();

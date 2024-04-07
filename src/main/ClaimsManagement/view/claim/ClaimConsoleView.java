@@ -4,6 +4,7 @@
 package view.claim;
 
 import model.claim.Claim;
+import model.customer.Customer;
 import model.document.Document;
 import util.ConsoleInput;
 import util.DateConverter;
@@ -24,7 +25,9 @@ public class ClaimConsoleView extends ClaimView {
         System.out.println("Status: " + claim.getStatus());
         System.out.println("Claim ID: " + claim.getId());
         System.out.println("Claim Date: " + DateConverter.localDateToString(claim.getClaimDate()));
-        System.out.println("Insured Person: " + claim.getInsuredPerson().getFullName());
+        // Handle null value
+        Customer insuredPerson = claim.getInsuredPerson();
+        System.out.println("Insured Person: " + ((insuredPerson != null)?insuredPerson.getFullName():"none"));
         System.out.println("Card Number: " + claim.getCardNumber());
         System.out.println("Exam Date: " + DateConverter.localDateToString(claim.getExamDate()));
         List<Document> documentList = claim.getDocuments();

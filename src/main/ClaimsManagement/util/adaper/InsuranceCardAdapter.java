@@ -24,7 +24,8 @@ public class InsuranceCardAdapter implements JsonSerializer<InsuranceCard>, Json
     public JsonElement serialize(InsuranceCard src, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("cardNumber", src.getCardNumber());
-        jsonObject.addProperty("cardHolder", src.getCardHolder().getId()); // Only write the Customer's ID instead of whole object
+        // Only write the Customer's ID instead of whole object. if card holder is null, write nothing
+        jsonObject.addProperty("cardHolder", (src.getCardHolder() != null)?src.getCardHolder().getId():"");
         jsonObject.add("policyOwner", context.serialize(src.getPolicyOwner()));
         jsonObject.add("expirationDate", context.serialize(src.getExpirationDate()));
         return jsonObject;
@@ -38,13 +39,17 @@ public class InsuranceCardAdapter implements JsonSerializer<InsuranceCard>, Json
         // Get the right Customer
         PolicyOwner policyOwner = context.deserialize(jsonObject.get("policyOwner"), PolicyOwner.class);
         LocalDate expirationDate = context.deserialize(jsonObject.get("expirationDate"), LocalDate.class);
-        Customer cardHolder = CustomerSet.getInstance().getCustomerById(cardHolderId);
 
         // Construct InsuranceCard
         InsuranceCard card = new InsuranceCard(cardNumber, null, policyOwner, expirationDate);
 
         // Add the card to the Customer
-        cardHolder.setInsuranceCard(card);
+        // Handle null value
+        if (!cardHolderId.isEmpty()) {
+            // Get the customer with the id from data file
+            Customer cardHolder = CustomerSet.getInstance().getCustomerById(cardHolderId);
+            cardHolder.setInsuranceCard(card);
+        }
         return card;
     }
 }

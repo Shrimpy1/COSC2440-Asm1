@@ -5,6 +5,7 @@ package view.customer;
 
 import model.claim.Claim;
 import model.customer.Customer;
+import model.insurance_card.InsuranceCard;
 import util.ConsoleInput;
 
 import java.util.HashMap;
@@ -24,10 +25,18 @@ public class CustomerConsoleView extends CustomerView{
     public void display(Customer customer) {
         System.out.println("Id: " + customer.getId());
         System.out.println("Full Name: " + customer.getFullName());
-        System.out.println("Insurance Card Number: " + customer.getInsuranceCard().getCardNumber());
+        // Handle null value
+        InsuranceCard card = customer.getInsuranceCard();
+        System.out.println("Insurance Card Number: " + ((card != null)?card.getCardNumber():"None"));
         System.out.println("Claims: ");
-        for (Claim claim : customer.getClaims()) {
-            System.out.println("- " + claim.getId());
+        // Handle no claims
+        List<Claim> claimList = customer.getClaims();
+        if (claimList.isEmpty()){
+            System.out.println("This Customer has no Claims.");
+        } else {
+            for (Claim claim : customer.getClaims()) {
+                System.out.println("- " + claim.getId());
+            }
         }
     }
 

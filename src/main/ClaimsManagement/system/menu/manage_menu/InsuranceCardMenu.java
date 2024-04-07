@@ -20,6 +20,7 @@ public class InsuranceCardMenu extends Menu {
 
     public InsuranceCardMenu() {
         super();
+        this.controller = new InsuranceCardController(null, new InsuranceCardConsoleView());
     }
 
     @Override
@@ -37,7 +38,7 @@ public class InsuranceCardMenu extends Menu {
     @Override
     public Menu handleUserInput(String choice) {
         switch (choice){
-            case "View Claim":
+            case "View Card Detail":
                 getInsuranceCardByNumber();
                 controller.display();
                 break;
@@ -55,7 +56,7 @@ public class InsuranceCardMenu extends Menu {
 
         while (card == null) {
             Scanner scanner = ConsoleInput.getInstance().getScanner();
-            System.out.print("Enter Claim ID: ");
+            System.out.print("Enter Insurance Card ID: ");
             String cardNumber = scanner.nextLine();
             card = InsuranceCardSet.getInstance().getInsuranceCardByNumber(cardNumber);
         }

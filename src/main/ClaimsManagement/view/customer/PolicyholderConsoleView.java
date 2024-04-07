@@ -17,25 +17,17 @@ public class PolicyholderConsoleView extends CustomerConsoleView{
     }
 
     @Override
-    public void display(Customer policyHolder) {
+    public void display(Customer policyholder) {
         System.out.println("\tPolicyholder information: ");
-        super.display(policyHolder);
-        System.out.println("Dependants: ");
-
-        Set<Dependant> dependants = ((Policyholder) policyHolder).getDependants();
-        dependants.forEach(dependant -> System.out.println("- " + dependant.getFullName()));
-        System.out.println();
+        super.display(policyholder);
+        displayDependants((Policyholder) policyholder);
     }
 
     @Override
-    public void displaySummary(Customer policyHolder) {
+    public void displaySummary(Customer policyholder) {
         System.out.println("\tPolicyholder information: ");
-        super.displaySummary(policyHolder);
-        System.out.println("Dependants: ");
-
-        Set<Dependant> dependants = ((Policyholder) policyHolder).getDependants();
-        dependants.forEach(dependant -> System.out.println("- " + dependant.getFullName()));
-        System.out.println();
+        super.displaySummary(policyholder);
+        displayDependants((Policyholder) policyholder);
     }
 
     @Override
@@ -44,7 +36,15 @@ public class PolicyholderConsoleView extends CustomerConsoleView{
         return super.displayNewCustomerForm();
     }
 
-    public void promptAddDependant(Policyholder policyholder){
+    public void displayDependants(Policyholder policyholder){
+        System.out.println("Dependants: ");
 
+        Set<Dependant> dependantList = policyholder.getDependants();
+        if (dependantList.isEmpty()){
+            System.out.println("This Policyholder has no dependants.");
+        } else {
+            dependantList.forEach(dependant -> System.out.println("- " + dependant.getFullName()));
+            System.out.println();
+        }
     }
 }
